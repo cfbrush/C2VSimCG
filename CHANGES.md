@@ -6,6 +6,7 @@ suggested change. Status: *proposed* until reviewed; reviewers mark *accepted* /
 | tag | Log.txt version | change (one line) | files touched | depends on | status |
 |---|---|---|---|---|---|
 | `C2VSimCG_v2025` | C2VSimCG v2025 | DWR public draft (unmodified base) | — | — | base |
+| `C2VSimCG_v2025+cb1` | C2VSimCG v2025+cb1 | Race condition: delivery adjustment - KOPTDV 11 to 10 (adjust GW pumping only; SW diversions are observed data) | Simulation/C2VSimCG.in (KOPTDV) | — | proposed |
 
 ## How to review one change
 
