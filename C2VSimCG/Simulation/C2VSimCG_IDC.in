@@ -1,0 +1,118 @@
+C*******************************************************************************
+C
+C                          IWFM DEMAND CALCULATOR (IDC)
+C
+C*******************************************************************************
+C
+C                            MAIN INPUT FILE
+C
+C
+C             Project:  C2VSim Coarse Grid (C2VSimCG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSimCG_IDC.in
+C             Version:  C2VSimCG v2025 
+C             
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model - Coarse Grid (C2VSimCG)
+C  Copyright (C) 2003-2025
+C  State of California, Department of Water Resources 
+C
+C  This model is free: you can redistribute it and/or modify it 
+C  under the terms of the GNU General Public License as published 
+C  by the Free Software Foundation, either version 3 of the License, 
+C  or (at your option) any later version.
+C
+C  This model is distributed in the hope that it will be useful, but  
+C  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+C  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public 
+C  License for more details.
+C
+C  You should have received a copy of the GNU General Public License 
+C  along with this model. If not, see (https://www.gnu.org/licenses/).
+C
+C  For technical support, e-mail: IWFMtechsupport@water.ca.gov 
+C
+C*******************************************************************************
+C                              File Description
+C
+C    This file contains the control data for IDC that includes the names and 
+C    descriptions of all simulation files; simulation period and output control 
+C    options.
+C
+C*****************************************************************************
+C                            File Description
+C
+C  *Listed below are all input and output file names used when running the
+C   utility.
+C
+C  *Each file name has a maximum length of 1000 characters.
+C
+C  *If an optional file does not exist for a project, leave the filename blank.
+C
+C  *Crop/Habitat Coefficient Data File (unit 8) is needed only if ETc (crop/habitat ET)  
+C   is computed by multiplying ETo (reference ET) with Kc (crop/habitat coefficient), 
+C   as in the case of Root Zone Component v4.13. In this case, ETo values are listed 
+C   in the Evapotranspiration Data File (unit 7).
+C
+C-------------------------------------------------------------------------------
+C    FILE NAME                                      DESCRIPTION
+C---------------------------------------------------------------------------------------------
+  ..\Preprocessor\C2VSimCG_Elements.dat             / 1: ELEMENT CONFIGURATION FILE (INPUT, REQUIRED)
+  ..\Preprocessor\C2VSimCG_Nodes.dat                / 2: NODE X-Y COORDINATE FILE (INPUT, REQUIRED)
+                                                    / 3: LAKE ELEMENTS DATA FILE (INPUT, OPTIONAL)
+  RootZone\C2VSimCG_RootZone.dat                    / 4: ROOT ZONE PARAMETER DATA FILE (INPUT, REQUIRED)
+                                                    / 5: DEPTH-TO-GROUNDWATER DATA FILE (INPUT, OPTIONAL)
+  C2VSimCG_Precip.dat                               / 6: PRECIPITATION DATA FILE (INPUT, REQUIRED)
+  C2VSimCG_ET.dat                                   / 7: EVAPOTRANSPIRATION DATA FILE (INPUT, REQUIRED)
+  C2VSimCG_CropCoefficient.dat                      / 8: CROP_HABITAT COEFFICIENT DATA FILE (INPUT, OPTIONAL)
+C*******************************************************************************
+C                         Model Simulation Period
+C
+C   The following lists the simulation beginning time, ending time and time step length.  
+C
+C   BDT    ; Beginning simulation date and time. Use MM/DD/YYYY_hh:mm format. 
+C             * Midnight is 24:00
+C   EDT   ; Ending simulation date and time.  Use MM/DD/YYYY_hh:mm format. 
+C            * Midnight is 24:00
+C   UNITT  ; Time step length and unit. Choose one of the following:
+C                  1MIN
+C                  2MIN
+C                  3MIN
+C                  4MIN
+C                  5MIN
+C                  10MIN
+C                  15MIN
+C                  20MIN
+C                  30MIN
+C                  1HOUR
+C                  2HOUR
+C                  3HOUR
+C                  4HOUR
+C                  6HOUR
+C                  8HOUR
+C                  12HOUR
+C                  1DAY
+C                  1WEEK
+C                  1MON
+C                  1YEAR
+C
+C-------------------------------------------------------------------------------
+C       VALUE                   DESCRIPTION
+C-------------------------------------------------------------------------------
+        09/30/1973_24:00        / BDT
+        09/30/2015_24:00        / EDT     
+        1MON                    / UNITT
+C******************************************************************************
+C                   Output Control Options
+C
+C    CACHE   ; Cache size in terms of number of values stored for time series data output
+C    KDEB    ; Enter  1 - to print messages on the screen to monitor execution
+C              Enter  0 - otherwise 
+C              Enter -1 - to supress printing of timesteps on the screen
+C
+C-----------------------------------------------------------------------------
+C       VALUE                   DESCRIPTION
+C-----------------------------------------------------------------------------
+      5000000                   / CACHE
+      0                         / KDEB

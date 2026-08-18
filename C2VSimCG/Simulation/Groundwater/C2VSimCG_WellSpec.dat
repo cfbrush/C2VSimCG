@@ -1,0 +1,1539 @@
+C*******************************************************************************
+C
+C                  INTEGRATED WATER FLOW MODEL (IWFM)
+C
+C*******************************************************************************
+C
+C                        WELL SPECIFICATION FILE
+C                           Pumping Component
+C                          *** Version 4.0 ***
+C
+C
+C             Project:  C2VSim Coarse Grid (C2VSimCG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSimCG_WellSpec.dat
+C             Version:  C2VSimCG v2025
+C
+C             Note:  Well coordinates are in NAD83 UTM Zone 10 coordinate system
+C
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model - Coarse Grid (C2VSimCG)
+C  Copyright (C) 2003-2025
+C  State of California, Department of Water Resources 
+C
+C  This model is free: you can redistribute it and/or modify it 
+C  under the terms of the GNU General Public License as published 
+C  by the Free Software Foundation, either version 3 of the License, 
+C  or (at your option) any later version.
+C
+C  This model is distributed in the hope that it will be useful, but  
+C  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+C  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public 
+C  License for more details.
+C
+C  You should have received a copy of the GNU General Public License 
+C  along with this model. If not, see (https://www.gnu.org/licenses/).
+C
+C  For technical support, e-mail: IWFMtechsupport@water.ca.gov 
+C
+C*******************************************************************************
+C                             File Description:
+C
+C   This data file includes the relevant data for the wells that are simulated 
+C   in the model.
+C
+C*******************************************************************************
+C              List of modeled wells and their corresponding parameters
+C
+C   NWELL ; Number of wells modeled
+C   FACTXY; Conversion factor for well coordinates
+C   FACTRW; Conversion factor for well diameter 
+C   FACTLT; Conversion factor for perforation depths 
+C
+C-------------------------------------------------------------------------------
+C     VALUE                       DESCRIPTION
+C-------------------------------------------------------------------------------
+      610                         / NWELL
+      3.2808                      / FACTXY  (m -> ft)
+      1.0                         / FACTRW
+      1.0                         / FACTLT
+C-------------------------------------------------------------------------------
+C*******************************************************************************
+C                    Well Location and Structure Characteristics
+C
+C   ID      ;  Well identification number
+C   XWELL   ;  X coordinate of well location, [L]
+C   YWELL   ;  Y-coordinate of well location, [L]
+C   RWELL   ;  Well diameter, [L]
+C   PERFT   ;  Elevation of or depth to the top of well screen, [L]
+C   PERFB   ;  Elevation of or depth to the bottom of well screen, [L]
+C                 *** Note: If PERFT > PERFB screening interval is given as elevations
+C                           IF PERFT < PERFB screening interval is given as depth-to top/bottom of screening
+C
+C-------------------------------------------------------------------------------
+C   ID       XWELL         YWELL       RWELL      PERFT          PERFB     
+C-------------------------------------------------------------------------------
+     1     620006.014    4289267.104    1.0     150.00000000     365.00000000   / 387439N1216191W001/Te Velde Trust
+     2     618926.774    4291680.645    1.0     165.00000000     455.00000000   / 387658N1216311W001/Te Velde Trust
+     3     622108.555    4290699.919    1.0     160.00000000     415.00000000   / 387566N1215947W001/Te Velde Trust
+     4     622109.711    4291133.947    1.0     149.00000000     415.00000000   / 387605N1215946W001/Te Velde Trust
+     5     612247.671    4336528.757    1.0     210.00000000     550.00000000   / 391707N1217006W001/Sutter Extension Water District
+     6     612504.473    4331763.766    1.0     354.00000000     580.00000000   / 391278N1216984W001/Sutter Extension Water District
+     7     606034.640    4298547.673    1.0     178.00000000     390.00000000   / 388293N1217784W001/River Garden Farms
+     8     606074.532    4299297.410    1.0     365.00000000     572.00000000   / 388361N1217778W001/River Garden Farms
+     9     609846.260    4299484.737    1.0     170.00000000     262.00000000   / 388373N1217344W001/River Garden Farms
+    10     607756.708    4299403.672    1.0     295.00000000     360.00000000   / 388368N1217584W001/River Garden Farms
+    11     609535.309    4296094.986    1.0     324.00000000     686.00000000   / 388068N1217385W001/River Garden Farms
+    12     610459.102    4295465.351    1.0     298.00000000     535.00000000   / 388010N1217279W001/River Garden Farms
+    13     608686.849    4295521.138    1.0     310.00000000     440.00000000   / 388018N1217483W001/River Garden Farms
+    14     609959.763    4299700.864    1.0     184.00000000     330.00000000   / 388393N1217330W001/River Garden Farms
+    15     606734.640    4297336.358    1.0     215.00000000     385.00000000   / 388183N1217705W001/River Garden Farms
+    16     623204.229    4318479.785    1.0     130.00000000     470.00000000   / 390067N1215771W001/Plumas Mutual Water Company
+    17     624238.900    4314101.314    1.0     135.00000000     255.00000000   / 389671N1215659W001/Plumas Mutual Water Company
+    18     625469.877    4314020.885    1.0     110.00000000     175.00000000   / 389662N1215517W001/Plumas Mutual Water Company
+    19     623657.885    4318712.233    1.0     342.00000000     450.00000000   / 390087N1215718W001/Plumas Mutual Water Company
+    20     624118.228    4317418.481    1.0     226.00000000     330.00000000   / 389970N1215667W001/Plumas Mutual Water Company
+    21     624295.618    4316221.303    1.0     279.00000000     355.00000000   / 389862N1215649W001/Plumas Mutual Water Company
+    22     620668.025    4295758.377    1.0     155.00000000     195.00000000   / 388023N1216104W001/Pleasant Grove Verona Mutual Water Company
+    23     621606.508    4298451.148    1.0     147.00000000     260.00000000   / 388265N1215991W001/Pleasant Grove Verona Mutual Water Company
+    24     621048.230    4296798.689    1.0     165.00000000     235.00000000   / 388117N1216058W001/Pleasant Grove Verona Mutual Water Company
+    25     621375.471    4296242.025    1.0     153.00000000     195.00000000   / 388066N1216021W001/Pleasant Grove Verona Mutual Water Company
+    26     621864.328    4299585.098    1.0     147.00000000     260.00000000   / 388361N1215959W001/Pleasant Grove Verona Mutual Water Company
+    27     621961.111    4298485.453    1.0     140.00000000     460.00000000   / 388267N1215950W001/Pleasant Grove Verona Mutual Water Company
+    28     622785.086    4296411.339    1.0      99.00000000     189.00000000   / 388079N1215859W001/Pleasant Grove Verona Mutual Water Company
+    29     622006.553    4296377.132    1.0      90.00000000     190.00000000   / 388077N1215948W001/Pleasant Grove Verona Mutual Water Company
+    30     621830.835    4294583.993    1.0     170.00000000     260.00000000   / 387916N1215972W001/Pleasant Grove Verona Mutual Water Company
+    31     621978.538    4297182.568    1.0     120.00000000     400.00000000   / 388150N1215950W001/Pleasant Grove Verona Mutual Water Company
+    32     621950.441    4297936.943    1.0     147.00000000     260.00000000   / 388218N1215952W001/Pleasant Grove Verona Mutual Water Company
+    33     622070.191    4296022.908    1.0     120.00000000     520.00000000   / 388045N1215942W001/Pleasant Grove Verona Mutual Water Company
+    34     621643.320    4295993.044    1.0     194.00000000     197.00000000   / 388043N1215991W001/Pleasant Grove Verona Mutual Water Company
+    35     621283.769    4295195.000    1.0     153.00000000     165.00000000   / 387972N1216034W001/Pleasant Grove Verona Mutual Water Company
+    36     622261.034    4294966.897    1.0     155.00000000     190.00000000   / 387950N1215922W001/Pleasant Grove Verona Mutual Water Company
+    37     620888.744    4294040.126    1.0     156.00000000     200.00000000   / 387868N1216081W001/Pleasant Grove Verona Mutual Water Company
+    38     624387.561    4300394.644    1.0     100.00000000     200.00000000   / 388436N1215667W001/Pleasant Grove Verona Mutual Water Company
+    39     625621.318    4297532.454    1.0     205.00000000     301.00000000   / 388176N1215530W001/Pleasant Grove Verona Mutual Water Company
+    40     624804.846    4298922.643    1.0     160.00000000     295.00000000   / 388303N1215622W001/Pleasant Grove Verona Mutual Water Company
+    41     622002.502    4300817.120    1.0     160.00000000     200.00000000   / 388477N1215941W001/Pleasant Grove Verona Mutual Water Company
+    42     625341.530    4297322.674    1.0     147.00000000     260.00000000   / 388158N1215563W001/Pleasant Grove Verona Mutual Water Company
+    43     622757.477    4300943.111    1.0     147.00000000     260.00000000   / 388488N1215854W001/Pleasant Grove Verona Mutual Water Company
+    44     623199.748    4300746.840    1.0     147.00000000     260.00000000   / 388469N1215803W001/Pleasant Grove Verona Mutual Water Company
+    45     621958.404    4298492.072    1.0     135.00000000     275.00000000   / 388268N1215950W001/Pleasant Grove Verona Mutual Water Company
+    46     622426.423    4296803.182    1.0     130.00000000     340.00000000   / 381150N1215899W001/Pleasant Grove Verona Mutual Water Company
+    47     621821.417    4294518.358    1.0     170.00000000     185.00000000   / 387910N1215973W001/Pleasant Grove Verona Mutual Water Company
+    48     623234.468    4298848.133    1.0     147.00000000     260.00000000   / 388298N1215803W001/Pleasant Grove Verona Mutual Water Company
+    49     625444.304    4298896.102    1.0     147.00000000     260.00000000   / 388299N1215548W001/Pleasant Grove Verona Mutual Water Company
+    50     623216.895    4298023.115    1.0     147.00000000     260.00000000   / 388224N1215806W001/Pleasant Grove Verona Mutual Water Company
+    51     622683.539    4298653.108    1.0     147.00000000     260.00000000   / 388281N1215866W001/Pleasant Grove Verona Mutual Water Company
+    52     601252.823    4312942.021    1.0     200.00000000     700.00000000   / 389596N1218314W001/Pelger Road 1700
+    53     601481.957    4310567.375    1.0     340.00000000     820.00000000   / 389382N1218291W001/Pelger Road 1700
+    54     603880.545    4313512.934    1.0     101.00000000     485.00000000   / 389644N1218010W001/Pelger Mutual Water Company
+    55     603080.497    4313066.237    1.0     130.00000000     300.00000000   / 389605N1218103W001/Pelger Mutual Water Company
+    56     606279.817    4309082.858    1.0     140.00000000     250.00000000   / 389242N1217740W001/Pelger Mutual Water Company
+    57     604698.059    4312243.963    1.0     135.00000000     285.00000000   / 389529N1217917W001/Pelger Mutual Water Company
+    58     629056.337    4289271.147    1.0     154.00000000     422.00000000   / 387427N1215150W001/Natomas Central Mutual Water Company
+    59     630210.072    4289423.154    1.0     249.00000000     952.00000000   / 387439N1215017W001/Natomas Central Mutual Water Company
+    60     630977.707    4289242.720    1.0     112.00000000     370.00000000   / 387422N1214929W001/Natomas Central Mutual Water Company
+    61     630109.250    4288677.776    1.0     154.00000000     422.00000000   / 387372N1215030W001/Natomas Central Mutual Water Company
+    62     629823.681    4290193.867    1.0     154.00000000     422.00000000   / 387509N1215060W001/Natomas Central Mutual Water Company
+    63     629488.742    4289944.197    1.0     154.00000000     422.00000000   / 387487N1215099W001/Natomas Central Mutual Water Company
+    64     628685.817    4290142.071    1.0     154.00000000     422.00000000   / 387506N1215191W001/Natomas Central Mutual Water Company
+    65     628463.996    4289883.177    1.0     154.00000000     422.00000000   / 387483N1215217W001/Natomas Central Mutual Water Company
+    66     628055.577    4293650.707    1.0     154.00000000     422.00000000   / 387823N1215257W001/Natomas Central Mutual Water Company
+    67     628039.377    4294116.662    1.0     154.00000000     422.00000000   / 387865N1215258W001/Natomas Central Mutual Water Company
+    68     628029.720    4294483.929    1.0     122.00000000     668.00000000   / 387898N1215259W001/Natomas Central Mutual Water Company
+    69     625381.079    4284727.927    1.0     165.00000000     296.00000000   / 387023N1215581W001/Natomas Central Mutual Water Company
+    70     627769.087    4284976.774    1.0     161.00000000     508.00000000   / 387042N1215306W001/Natomas Central Mutual Water Company
+    71     627853.968    4284023.519    1.0     150.00000000     510.00000000   / 386956N1215298W001/Natomas Central Mutual Water Company
+    72     625808.380    4274722.466    1.0     192.00000000     503.00000000   / 386121N1215550W001/Natomas Central Mutual Water Company
+    73     623642.837    4294146.903    1.0     150.00000000     252.00000000   / 387874N1215764W001/Natomas Central Mutual Water Company
+    74     625731.864    4297242.267    1.0     160.00000000     190.00000000   / 388150N1215518W001/Natomas Central Mutual Water Company
+    75     623994.145    4295861.696    1.0     150.00000000     226.00000000   / 388028N1215720W001/Natomas Central Mutual Water Company
+    76     623582.037    4294145.957    1.0     140.00000000     370.00000000   / 387874N1215771W001/Natomas Central Mutual Water Company
+    77     622879.611    4288463.491    1.0     110.00000000     288.00000000   / 387363N1215862W001/Natomas Central Mutual Water Company
+    78     624871.287    4278843.589    1.0     120.00000000     290.00000000   / 386494N1215650W001/Natomas Central Mutual Water Company
+    79     629893.572    4287989.359    1.0     220.00000000     350.00000000   / 387310N1215056W001/Natomas Central Mutual Water Company
+    80     630926.024    4288019.598    1.0     154.00000000     422.00000000   / 387312N1214937W001/Natomas Central Mutual Water Company
+    81     619966.096    4282797.544    1.0     152.00000000     535.00000000   / 386857N1216207W001/Natomas Central Mutual Water Company
+    82     628492.192    4287329.451    1.0     110.00000000     440.00000000   / 387253N1215219W001/Natomas Central Mutual Water Company
+    83     622505.620    4312276.615    1.0      95.00000000     225.00000000   / 389509N1215863W001/Garden Highway Mutual Water Company
+    84     622070.504    4312287.415    1.0     148.00000000     240.00000000   / 389510N1215913W001/Garden Highway Mutual Water Company
+    85     622232.028    4310480.886    1.0     160.00000000     365.00000000   / 389347N1215897W001/Garden Highway Mutual Water Company
+    86     622503.473    4312124.506    1.0     138.00000000     255.00000000   / 389495N1215863W001/Garden Highway Mutual Water Company
+    87     622519.171    4312844.500    1.0     150.00000000     190.00000000   / 389560N1215860W001/Garden Highway Mutual Water Company
+    88     612263.639    4278515.340    1.0     270.00000000     740.00000000   / 386481N1217099W001/Conaway Preservation Group
+    89     614104.326    4278471.514    1.0     144.00000000     390.00000000   / 386475N1216888W001/Conaway Preservation Group
+    90     613222.319    4277999.444    1.0     260.00000000     800.00000000   / 386433N1216990W001/Conaway Preservation Group
+    91     614663.921    4277629.321    1.0     330.00000000     960.00000000   / 386398N1216825W001/Conaway Preservation Group
+    92     612255.066    4277887.001    1.0     300.00000000     790.00000000   / 386424N1217101W001/Conaway Preservation Group
+    93     612238.110    4275562.585    1.0     280.00000000     590.00000000   / 386215N1217107W001/Conaway Preservation Group
+    94     617538.388    4276092.771    1.0     170.00000000     400.00000000   / 386256N1216497W001/Conaway Preservation Group
+    95     615456.861    4275287.679    1.0     260.00000000     420.00000000   / 386186N1216738W001/Conaway Preservation Group
+    96     616812.066    4275269.638    1.0     170.00000000     470.00000000   / 386183N1216582W001/Conaway Preservation Group
+    97     616759.295    4273683.981    1.0     230.00000000     850.00000000   / 386040N1216591W001/Conaway Preservation Group
+    98     617914.249    4275227.000    1.0     231.00000000     657.00000000   / 386177N1216456W001/Conaway Preservation Group
+    99     612230.625    4274712.948    1.0     320.00000000     880.00000000   / 386138N1217109W001/Conaway Preservation Group
+   100     615533.867    4281215.882    1.0     180.00000000     480.00000000   / 386720N1216719W001/Conaway Preservation Group
+   101     616623.208    4281696.808    1.0     190.00000000     300.00000000   / 386762N1216593W001/Conaway Preservation Group
+   102     615549.990    4281664.534    1.0     260.00000000     640.00000000   / 386760N1216716W001/Conaway Preservation Group
+   103     615753.494    4280532.009    1.0     220.00000000     980.00000000   / 386658N1216695W001/Conaway Preservation Group
+   104     615890.852    4279702.653    1.0     220.00000000     980.00000000   / 386583N1216680W001/Conaway Preservation Group
+   105     615969.492    4279082.226    1.0     220.00000000     600.00000000   / 386527N1216673W001/Conaway Preservation Group
+   106     615290.925    4279301.042    1.0     221.00000000     668.00000000   / 386548N1216750W001/Conaway Preservation Group
+   107     614745.276    4278449.624    1.0     240.00000000     600.00000000   / 386472N1216814W001/Conaway Preservation Group
+   108     615486.777    4278397.051    1.0     170.00000000     300.00000000   / 386466N1216729W001/Conaway Preservation Group
+   109     616580.849    4277687.049    1.0     120.00000000     290.00000000   / 386401N1216605W001/Conaway Preservation Group
+   110     616141.453    4278449.837    1.0     210.00000000     860.00000000   / 386470N1216654W001/Conaway Preservation Group
+   111     612250.676    4276836.952    1.0     300.00000000     940.00000000   / 386330N1217103W001/Conaway Preservation Group
+   112     613940.180    4278494.809    1.0     260.00000000     850.00000000   / 386477N1216907W001/Conaway Preservation Group
+   113     629081.620    4347903.447    1.0     151.00000000     242.00000000   / 392709N1215037W001/Cordua Irrigation District
+   114     628706.531    4347646.140    1.0     151.00000000     242.00000000   / 392686N1215081W001/Cordua Irrigation District
+   115     627734.059    4346377.384    1.0     151.00000000     242.00000000   / 392574N1215196W001/Cordua Irrigation District
+   116     626853.787    4347219.167    1.0     151.00000000     242.00000000   / 392651N1215296W001/Cordua Irrigation District
+   117     627786.009    4347232.148    1.0     151.00000000     242.00000000   / 392651N1215188W001/Cordua Irrigation District
+   118     627886.969    4345540.627    1.0     151.00000000     242.00000000   / 392498N1215180W001/Cordua Irrigation District
+   119     627257.375    4347882.155    1.0     151.00000000     242.00000000   / 392709N1215248W001/Cordua Irrigation District
+   120     627199.020    4348296.615    1.0     151.00000000     242.00000000   / 392747N1215254W001/Cordua Irrigation District
+   121     628961.099    4345424.624    1.0     151.00000000     242.00000000   / 392486N1215055W001/Cordua Irrigation District
+   122     628704.272    4346977.023    1.0     151.00000000     242.00000000   / 392626N1215082W001/Cordua Irrigation District
+   123     624338.781    4343759.795    1.0     151.00000000     242.00000000   / 392343N1215594W001/Cordua Irrigation District
+   124     624416.454    4347170.625    1.0     151.00000000     242.00000000   / 392650N1215579W001/Cordua Irrigation District
+   125     624248.951    4344778.000    1.0     151.00000000     242.00000000   / 392434N1215603W001/Cordua Irrigation District
+   126     624252.798    4345399.167    1.0     151.00000000     242.00000000   / 392490N1215601W001/Cordua Irrigation District
+   127     626093.237    4346381.472    1.0     151.00000000     242.00000000   / 392576N1215386W001/Cordua Irrigation District
+   128     629247.482    4346176.924    1.0     151.00000000     242.00000000   / 392553N1215021W001/Cordua Irrigation District
+   129     625616.992    4346377.017    1.0     151.00000000     242.00000000   / 392576N1215441W001/Cordua Irrigation District
+   130     624942.292    4347141.166    1.0     151.00000000     242.00000000   / 392640N1215488W001/Cordua Irrigation District
+   131     626277.221    4343198.955    1.0     151.00000000     242.00000000   / 392289N1215370W001/Cordua Irrigation District
+   132     622961.754    4347106.618    1.0     151.00000000     242.00000000   / 392644N1215754W001/Cordua Irrigation District
+   133     630002.890    4341893.107    1.0     150.00000000     230.00000000   / 392166N1214941W001/Cordua Irrigation District
+   134     627432.326    4345642.435    1.0     120.00000000     290.00000000   / 392507N1215234W001/Cordua Irrigation District
+   135     629289.350    4345654.964    1.0     182.00000000     205.00000000   / 392506N1215016W001/Cordua Irrigation District
+   136     622810.817    4344845.406    1.0     151.00000000     242.00000000   / 392442N1215769W001/Cordua Irrigation District
+   137     622207.120    4347094.660    1.0     151.00000000     242.00000000   / 392646N1215834W001/Cordua Irrigation District
+   138     623495.714    4345373.065    1.0     151.00000000     242.00000000   / 392489N1215689W001/Cordua Irrigation District
+   139     606685.561    4327126.432    1.0     120.00000000     360.00000000   / 390867N1217665W001/Tule Basin Farms
+   140     607280.896    4325212.040    1.0     170.00000000     310.00000000   / 390694N1217599W001/Tule Basin Farms
+   141     607071.493    4325212.516    1.0     130.00000000     405.00000000   / 390695N1217623W001/Tule Basin Farms
+   142     610838.717    4252703.448    1.0     210.00000000     438.00000000   / 384157N1217304W001/Reclamation District 2068
+   143     613187.475    4351023.289    1.0     263.00000000     580.00000000   / 393012N1216873W001/Butte Water District
+   144     611578.616    4350145.364    1.0     279.00000000     596.00000000   / 392935N1217061W001/Butte Water District
+   145     585024.498    4396036.318    1.0     782.00000000    1227.00000000   / 397100N1220081W001/Glenn-Colusa Irrigation District
+   146     584753.205    4392958.374    1.0     800.00000000    1260.00000000   / 396823N1220117W001/Glenn-Colusa Irrigation District
+   147     582981.138    4387715.975    1.0     190.00000000     710.00000000   / 396352N1220330W001/Glenn-Colusa Irrigation District
+   148     583779.782    4400190.413    1.0     920.00000000    1230.00000000   / 397475N1220221W001/Glenn-Colusa Irrigation District
+   149     581393.959    4404598.460    1.0     800.00000000    1300.00000000   / 397875N1220494W001/Glenn-Colusa Irrigation District
+   150     581303.164    4327298.085    1.0     100.00000000     640.00000000   / 390910N1220599W001/Glenn-Colusa Irrigation District
+   151     563547.686    4363011.358    1.0      30.00000000     160.00000000   / 394143N1222618W001/Glenn-Colusa Irrigation District
+   152     563880.671    4363495.002    1.0      30.00000000     210.00000000   / 394186N1222579W001/Glenn-Colusa Irrigation District
+   153     563898.964    4362725.892    1.0      25.00000000     165.00000000   / 394117N1222578W001/Glenn-Colusa Irrigation District
+   154     574599.959    4329562.616    1.0     200.00000000     760.00000000   / 391120N1221371W001/Glenn-Colusa Irrigation District
+   155     566824.208    4335042.113    1.0     100.00000000     280.00000000   / 391620N1222265W001/Glenn-Colusa Irrigation District
+   156     567222.527    4335242.849    1.0      20.00000000     290.00000000   / 391638N1222219W001/Glenn-Colusa Irrigation District
+   157     567241.970    4334799.300    1.0      30.00000000     350.00000000   / 391598N1222217W001/Glenn-Colusa Irrigation District
+   158     568030.287    4334983.123    1.0      40.00000000     300.00000000   / 391614N1222126W001/Glenn-Colusa Irrigation District
+   159     575530.745    4333245.833    1.0     240.00000000     400.00000000   / 391451N1221260W001/Glenn-Colusa Irrigation District
+   160     580453.222    4328656.037    1.0     210.00000000     690.00000000   / 391033N1220695W001/Glenn-Colusa Irrigation District
+   161     570139.842    4332236.967    1.0      30.00000000     945.00000000   / 391365N1221884W001/Glenn-Colusa Irrigation District
+   162     574479.289    4356603.402    1.0     605.00000000     685.00000000   / 393557N1221355W001/Glenn-Colusa Irrigation District
+   163     581809.533    4383582.417    1.0      60.00000000     400.00000000   / 395981N1220472W001/Glenn-Colusa Irrigation District
+   164     580688.283    4383570.612    1.0      71.00000000     141.00000000   / 395981N1220602W001/Glenn-Colusa Irrigation District
+   165     579001.100    4383891.585    1.0     100.00000000     180.00000000   / 396011N1220798W001/Glenn-Colusa Irrigation District
+   166     576335.371    4374207.069    1.0      80.00000000     230.00000000   / 395141N1221120W001/Glenn-Colusa Irrigation District
+   167     585103.925    4348638.411    1.0     200.00000000     305.00000000   / 392829N1220133W001/CANAL FARMS
+   168     584959.622    4348819.977    1.0     210.00000000     265.00000000   / 392846N1220149W001/CANAL FARMS
+   169     586622.389    4348222.243    1.0     185.00000000     265.00000000   / 392790N1219957W001/T & P Farms
+   170     586123.784    4348222.275    1.0     180.00000000     660.00000000   / 392791N1220015W001/T & P Farms
+   171     590533.659    4353790.881    1.0     100.00000000     310.00000000   / 393288N1219496W001/Reclamation District 1004
+   172     589083.865    4360251.898    1.0      56.00000000     132.00000000   / 393872N1219656W001/Reclamation District 1004
+   173     590985.677    4357452.373    1.0     180.00000000     430.00000000   / 393617N1219439W001/Reclamation District 1004
+   174     590853.778    4339972.405    1.0     120.00000000     240.00000000   / 392043N1219478W001/Reclamation District 1004
+   175     590528.732    4355030.651    1.0     130.00000000     256.00000000   / 393400N1219495W001/Reclamation District 1004
+   176     591112.135    4355408.183    1.0     147.00000000     250.00000000   / 393433N1219427W001/Reclamation District 1004
+   177     591900.882    4355031.182    1.0     130.00000000     170.00000000   / 393398N1219336W001/Reclamation District 1004
+   178     589385.162    4351784.143    1.0      64.00000000     480.00000000   / 393108N1219632W001/Reclamation District 1004
+   179     589848.034    4360609.221    1.0     107.00000000     145.00000000   / 393903N1219567W001/Reclamation District 1004
+   180     591123.057    4356168.638    1.0     176.00000000     260.00000000   / 393502N1219425W001/Reclamation District 1004
+   181     590728.974    4352934.044    1.0     160.00000000     275.00000000   / 393211N1219475W001/Reclamation District 1004
+   182     589994.973    4352962.162    1.0     165.00000000     275.00000000   / 393214N1219560W001/Reclamation District 1004
+   183     589653.145    4352174.594    1.0     147.00000000     305.00000000   / 393143N1219600W001/Reclamation District 1004
+   184     590675.183    4360582.196    1.0     128.00000000     270.00000000   / 393900N1219471W001/Reclamation District 1004
+   185     583178.895    4364500.846    1.0     120.00000000     260.00000000   / 394260N1220336W001/Princeton-Colusa Irrigation District
+   186     583522.241    4365552.327    1.0      20.00000000     183.00000000   / 394355N1220295W001/Princeton-Colusa Irrigation District
+   187     582400.223    4373209.021    1.0     120.00000000     380.00000000   / 395046N1220416W001/Princeton-Colusa Irrigation District
+   188     582112.598    4367973.627    1.0     160.00000000     260.00000000   / 394574N1220456W001/Provident Irrigation District
+   189     581195.087    4367179.234    1.0     100.00000000     420.00000000   / 394504N1220563W001/Provident Irrigation District
+   190     583169.247    4375979.954    1.0     100.00000000     290.00000000   / 395295N1220323W001/Provident Irrigation District
+   191     578684.079    4367776.035    1.0     160.00000000     260.00000000   / 394560N1220854W001/Provident Irrigation District
+   192     578814.216    4367162.450    1.0     160.00000000     300.00000000   / 394504N1220840W001/Provident Irrigation District
+   193     579757.406    4367825.402    1.0     136.00000000     306.00000000   / 394563N1220730W001/Provident Irrigation District
+   194     580129.383    4367966.203    1.0     136.00000000     306.00000000   / 394575N1220686W001/Provident Irrigation District
+   195     600414.971    4317959.991    1.0     160.00000000     650.00000000   / 390049N1218403W001/Reclamation District 108
+   196     596476.003    4317133.845    1.0     225.00000000     550.00000000   / 389979N1218859W001/Reclamation District 108
+   197     600695.948    4300994.586    1.0     250.00000000     680.00000000   / 388520N1218395W001/Reclamation District 108
+   198     600265.852    4309023.481    1.0     290.00000000     350.00000000   / 389244N1218433W001/Reclamation District 108
+   199     591250.326    4315532.531    1.0     335.00000000     535.00000000   / 389840N1219465W001/Reclamation District 108
+   200     560108.709    4471730.289    1.0     160.00000000     255.00000000   / 403940N1222917W001/Anderson-Cottonwood Irrigation District
+   201     560360.102    4476704.746    1.0     150.00000000     455.00000000   / 404388N1222883W001/Anderson-Cottonwood Irrigation District
+   202     587173.312    4346240.483    1.0     150.00000000     240.00000000   / 392611N1219896W001/Eastside Mutual Water Company
+   203     639378.002    4274356.821    1.0     170.00000000     415.00000000   / SacSubWD-2A/Sacramento Suburban Water District
+   204     639412.408    4273352.808    1.0     200.00000000     225.00000000   / SacSubWD-3A/Sacramento Suburban Water District
+   205     638187.599    4275518.704    1.0     200.00000000     570.00000000   / SacSubWD-4B/Sacramento Suburban Water District
+   206     638334.237    4274850.762    1.0     345.00000000     424.00000000   / SacSubWD-5/Sacramento Suburban Water District
+   207     639487.444    4276200.563    1.0     235.00000000     472.00000000   / SacSubWD-7/Sacramento Suburban Water District
+   208     642495.008    4274880.461    1.0     235.00000000     472.00000000   / SacSubWD-9/Sacramento Suburban Water District
+   209     638503.393    4274478.045    1.0     168.00000000     271.00000000   / SacSubWD-12/Sacramento Suburban Water District
+   210     639529.776    4275801.120    1.0     350.00000000     368.00000000   / SacSubWD-13/Sacramento Suburban Water District
+   211     638877.960    4275553.763    1.0     456.00000000     466.00000000   / SacSubWD-14/Sacramento Suburban Water District
+   212     641783.593    4273529.268    1.0     235.00000000     472.00000000   / SacSubWD-18/Sacramento Suburban Water District
+   213     640427.591    4274912.469    1.0     190.00000000     365.00000000   / SacSubWD-19/Sacramento Suburban Water District
+   214     640871.025    4273379.151    1.0     235.00000000     472.00000000   / SacSubWD-20A/Sacramento Suburban Water District
+   215     641362.516    4277106.718    1.0     322.00000000     341.00000000   / SacSubWD-22/Sacramento Suburban Water District
+   216     638879.572    4275776.693    1.0     279.00000000     369.00000000   / SacSubWD-23/Sacramento Suburban Water District
+   217     641418.407    4276276.141    1.0     212.00000000     360.00000000   / SacSubWD-24/Sacramento Suburban Water District
+   218     642749.552    4273414.910    1.0     152.00000000     312.00000000   / SacSubWD-25/Sacramento Suburban Water District
+   219     642756.979    4275661.868    1.0     194.00000000     450.00000000   / SacSubWD-26/Sacramento Suburban Water District
+   220     641241.822    4282845.423    1.0     235.00000000     472.00000000   / SacSubWD-27/Sacramento Suburban Water District
+   221     637467.002    4275251.515    1.0     222.00000000     370.00000000   / SacSubWD-28/Sacramento Suburban Water District
+   222     637248.515    4274063.106    1.0     370.00000000     460.00000000   / SacSubWD-30/Sacramento Suburban Water District
+   223     640446.318    4283400.957    1.0     185.00000000     655.00000000   / SacSubWD-31A/Sacramento Suburban Water District
+   224     643526.550    4275272.246    1.0     280.00000000     810.00000000   / SacSubWD-32A/Sacramento Suburban Water District
+   225     641735.793    4278210.992    1.0     200.00000000     470.00000000   / SacSubWD-33A/Sacramento Suburban Water District
+   226     641529.602    4283176.897    1.0     225.00000000     400.00000000   / SacSubWD-34/Sacramento Suburban Water District
+   227     642793.360    4273713.085    1.0     252.00000000     297.00000000   / SacSubWD-35/Sacramento Suburban Water District
+   228     640010.155    4274175.271    1.0     180.00000000     400.00000000   / SacSubWD-37/Sacramento Suburban Water District
+   229     640807.293    4277577.909    1.0     160.00000000     170.00000000   / SacSubWD-38/Sacramento Suburban Water District
+   230     641241.772    4283943.088    1.0     195.00000000     380.00000000   / SacSubWD-39/Sacramento Suburban Water District
+   231     639384.467    4276956.613    1.0     190.00000000     420.00000000   / SacSubWD-40/Sacramento Suburban Water District
+   232     639365.978    4276983.265    1.0     270.00000000     742.00000000   / SacSubWD-40A/Sacramento Suburban Water District
+   233     637110.949    4275531.904    1.0     180.00000000     420.00000000   / SacSubWD-41/Sacramento Suburban Water District
+   234     637988.384    4276111.032    1.0     200.00000000     385.00000000   / SacSubWD-43/Sacramento Suburban Water District
+   235     637140.586    4273708.034    1.0     180.00000000     390.00000000   / SacSubWD-45/Sacramento Suburban Water District
+   236     643435.394    4273051.861    1.0     145.00000000     346.00000000   / SacSubWD-47/Sacramento Suburban Water District
+   237     642238.484    4283858.132    1.0     220.00000000     600.00000000   / SacSubWD-52/Sacramento Suburban Water District
+   238     642881.996    4272243.023    1.0     182.00000000     358.00000000   / SacSubWD-55A/Sacramento Suburban Water District
+   239     640972.778    4281974.565    1.0     250.00000000     660.00000000   / SacSubWD-56A/Sacramento Suburban Water District
+   240     639808.528    4283244.654    1.0     220.00000000     685.00000000   / SacSubWD-58/Sacramento Suburban Water District
+   241     641571.117    4284880.308    1.0     250.00000000     710.00000000   / SacSubWD-59A/Sacramento Suburban Water District
+   242     642781.495    4276750.865    1.0     163.00000000     435.00000000   / SacSubWD-60/Sacramento Suburban Water District
+   243     641408.722    4284511.867    1.0     232.00000000     616.00000000   / SacSubWD-64/Sacramento Suburban Water District
+   244     641334.770    4277641.178    1.0     187.00000000     342.00000000   / SacSubWD-65/Sacramento Suburban Water District
+   245     642468.804    4276413.364    1.0     170.00000000     393.00000000   / SacSubWD-66/Sacramento Suburban Water District
+   246     638537.462    4271631.214    1.0     235.00000000     472.00000000   / SacSubWD-68R/Sacramento Suburban Water District
+   247     639369.253    4272979.850    1.0     235.00000000     472.00000000   / SacSubWD-69/Sacramento Suburban Water District
+   248     638323.660    4271216.793    1.0     160.00000000     289.00000000   / SacSubWD-70/Sacramento Suburban Water District
+   249     643323.685    4271900.692    1.0     165.00000000     415.00000000   / SacSubWD-71/Sacramento Suburban Water District
+   250     644651.460    4271782.720    1.0     320.00000000     875.00000000   / SacSubWD-72/Sacramento Suburban Water District
+   251     644772.882    4271823.659    1.0     230.00000000     630.00000000   / SacSubWD-73/Sacramento Suburban Water District
+   252     644656.636    4271718.095    1.0     195.00000000     635.00000000   / SacSubWD-74/Sacramento Suburban Water District
+   253     637754.842    4271611.040    1.0     895.00000000    1290.00000000   / SacSubWD-75/Sacramento Suburban Water District
+   254     639009.481    4270927.741    1.0     200.00000000     290.00000000   / SacSubWD-76/Sacramento Suburban Water District
+   255     640680.051    4271458.245    1.0     195.00000000     303.00000000   / SacSubWD-77/Sacramento Suburban Water District
+   256     642546.938    4278563.237    1.0     180.00000000     309.00000000   / SacSubWD-N1/Sacramento Suburban Water District
+   257     643366.181    4277170.966    1.0     150.00000000     258.00000000   / SacSubWD-N3/Sacramento Suburban Water District
+   258     642993.678    4283081.249    1.0     210.00000000     532.00000000   / SacSubWD-N5/Sacramento Suburban Water District
+   259     644919.406    4281204.625    1.0     235.00000000     472.00000000   / SacSubWD-N6/Sacramento Suburban Water District
+   260     645141.702    4281748.963    1.0     235.00000000     472.00000000   / SacSubWD-N7/Sacramento Suburban Water District
+   261     645510.685    4282674.536    1.0     235.00000000     472.00000000   / SacSubWD-N8/Sacramento Suburban Water District
+   262     644596.411    4279126.070    1.0     220.00000000     520.00000000   / SacSubWD-N9/Sacramento Suburban Water District
+   263     643747.978    4280749.484    1.0     225.00000000     525.00000000   / SacSubWD-N10/Sacramento Suburban Water District
+   264     645349.586    4278615.887    1.0     200.00000000     524.00000000   / SacSubWD-N12/Sacramento Suburban Water District
+   265     639910.952    4278703.871    1.0     206.00000000     470.00000000   / SacSubWD-N14/Sacramento Suburban Water District
+   266     642588.086    4281292.599    1.0     205.00000000     481.00000000   / SacSubWD-N15/Sacramento Suburban Water District
+   267     640982.352    4279581.265    1.0     220.00000000     520.00000000   / SacSubWD-N17/Sacramento Suburban Water District
+   268     644231.252    4278006.245    1.0     350.00000000     500.00000000   / SacSubWD-N20/Sacramento Suburban Water District
+   269     643205.321    4279478.090    1.0     240.00000000     540.00000000   / SacSubWD-N22/Sacramento Suburban Water District
+   270     643010.893    4280112.024    1.0     270.00000000     540.00000000   / SacSubWD-N23/Sacramento Suburban Water District
+   271     642616.533    4283613.560    1.0     260.00000000     500.00000000   / SacSubWD-N24/Sacramento Suburban Water District
+   272     642621.883    4284111.873    1.0     260.00000000     530.00000000   / SacSubWD-N25/Sacramento Suburban Water District
+   273     643322.376    4284795.172    1.0     316.00000000     450.00000000   / SacSubWD-N26/Sacramento Suburban Water District
+   274     646748.025    4279890.920    1.0     180.00000000     528.00000000   / SacSubWD-N27/Sacramento Suburban Water District
+   275     645658.951    4280812.237    1.0     258.00000000     501.00000000   / SacSubWD-N29/Sacramento Suburban Water District
+   276     646535.172    4282066.634    1.0     168.00000000     402.00000000   / SacSubWD-N30/Sacramento Suburban Water District
+   277     645936.775    4279403.574    1.0     235.00000000     472.00000000   / SacSubWD-N31/Sacramento Suburban Water District
+   278     645065.203    4285964.486    1.0     365.00000000     550.00000000   / SacSubWD-N32A/Sacramento Suburban Water District
+   279     645058.227    4285970.243    1.0     235.00000000     472.00000000   / SacSubWD-N32B/Sacramento Suburban Water District
+   280     645061.759    4285967.310    1.0     240.00000000     320.00000000   / SacSubWD-N32C/Sacramento Suburban Water District
+   281     642383.222    4285407.874    1.0     235.00000000     472.00000000   / SacSubWD-N33/Sacramento Suburban Water District
+   282     642849.647    4285863.046    1.0     301.00000000     557.00000000   / SacSubWD-N34/Sacramento Suburban Water District
+   283     645234.016    4287314.705    1.0     235.00000000     472.00000000   / SacSubWD-N35/Sacramento Suburban Water District
+   284     640189.506    4285886.043    1.0     160.00000000     475.00000000   / SacSubWD-MC-1C/Sacramento Suburban Water District
+   285     641321.964    4285827.242    1.0     235.00000000     472.00000000   / SacSubWD-MC-2C/Sacramento Suburban Water District
+   286     640763.321    4286071.894    1.0     135.00000000     435.00000000   / SacSubWD-MC-3C/Sacramento Suburban Water District
+   287     640670.553    4280879.340    1.0     235.00000000     472.00000000   / SacSubWD-MC10/Sacramento Suburban Water District
+   288     637491.661    4258892.536    1.0     108.00000000     230.00000000   / CityOfSac-83/City of Sacramento
+   289     632403.290    4275441.740    1.0     118.00000000     422.00000000   / CityOfSac-92/City of Sacramento
+   290     632507.398    4275990.711    1.0     146.00000000     298.00000000   / CityOfSac-93/City of Sacramento
+   291     632551.705    4276574.213    1.0     288.00000000     351.00000000   / CityOfSac-94/City of Sacramento
+   292     636843.399    4258883.687    1.0     235.00000000     472.00000000   / CityOfSac-107/City of Sacramento
+   293     634904.855    4274952.983    1.0     200.00000000     340.00000000   / CityOfSac-116/City of Sacramento
+   294     635499.794    4275872.178    1.0     265.00000000     420.00000000   / CityOfSac-120/City of Sacramento
+   295     636475.992    4275822.191    1.0     230.00000000     400.00000000   / CityOfSac-122/City of Sacramento
+   296     633835.441    4276299.239    1.0     171.00000000     298.00000000   / CityOfSac-124/City of Sacramento
+   297     636117.753    4276709.673    1.0     188.00000000     410.00000000   / CityOfSac-126/City of Sacramento
+   298     636701.663    4276527.605    1.0     151.00000000     401.00000000   / CityOfSac-127/City of Sacramento
+   299     635188.705    4277787.293    1.0     136.00000000     295.00000000   / CityOfSac-129/City of Sacramento
+   300     636873.265    4277992.271    1.0     150.00000000     280.00000000   / CityOfSac-131/City of Sacramento
+   301     633178.670    4279182.134    1.0     260.00000000     510.00000000   / CityOfSac-133/City of Sacramento
+   302     634078.491    4278782.043    1.0     250.00000000     500.00000000   / CityOfSac-134/City of Sacramento
+   303     637469.185    4276860.476    1.0      80.00000000     245.00000000   / CityOfSac-137/City of Sacramento
+   304     636133.427    4278139.692    1.0     113.00000000     370.00000000   / CityOfSac-138/City of Sacramento
+   305     634411.622    4275073.437    1.0     144.00000000     384.00000000   / CityOfSac-142/City of Sacramento
+   306     635204.076    4276004.814    1.0     140.00000000     330.00000000   / CityOfSac-143/City of Sacramento
+   307     636927.920    4276129.639    1.0     144.00000000     398.00000000   / CityOfSac-144/City of Sacramento
+   308     634994.384    4279598.938    1.0     260.00000000     516.00000000   / CityOfSac-153/City of Sacramento
+   309     635889.761    4281098.286    1.0     148.00000000     412.00000000   / CityOfSac-154/City of Sacramento
+   310     638169.416    4277405.391    1.0     175.00000000     427.00000000   / CityOfSac-155/City of Sacramento
+   311     635340.312    4273461.785    1.0     190.00000000     275.00000000   / CityOfSac-156/City of Sacramento
+   312     636959.780    4273151.906    1.0     113.00000000     313.00000000   / CityOfSac-158/City of Sacramento
+   313     633259.080    4275458.187    1.0     112.00000000     352.00000000   / CityOfSac-159/City of Sacramento
+   314     633432.300    4279995.592    1.0     222.00000000     625.00000000   / CityOfSac-164/City of Sacramento
+   315     632426.572    4331438.027    1.0     121.25061360     279.28337750   / BRO-36 / Brophy Water District
+   316     632039.217    4331390.554    1.0     121.34758550     277.39093020   / BRO-35 / Brophy Water District
+   317     632044.208    4330992.118    1.0     120.58870040     275.26574710   / BRO-37 / Brophy Water District
+   318     631505.244    4330752.405    1.0     123.32214440     278.29466420   / BRO-32 / Brophy Water District
+   319     629411.537    4332046.540    1.0     145.56837630     312.40827430   / BRO-24 / Brophy Water District
+   320     630020.161    4331881.482    1.0     141.07665850     305.71031360   / BRO-25 / Brophy Water District
+   321     629229.900    4331063.601    1.0     140.32433010     302.11132810   / BRO-26 / Brophy Water District
+   322     630042.512    4330517.805    1.0     131.59329900     287.58498810   / BRO-27 / Brophy Water District
+   323     630038.609    4330771.669    1.0     134.09194070     292.27529470   / BRO-28 / Brophy Water District
+   324     630840.903    4331384.597    1.0     130.75938220     290.11601640   / BRO-29 / Brophy Water District
+   325     630827.961    4331103.250    1.0     130.39127680     288.88835800   / BRO-31 / Brophy Water District
+   326     630676.927    4332129.530    1.0     133.88358690     296.69993590   / BRO-30 / Brophy Water District
+   327     627761.759    4329742.912    1.0     131.41081620     285.00093460   / BRO-73 / Brophy Water District
+   328     627667.647    4329721.808    1.0     132.18306160     287.06397630   / BRO-74 / Brophy Water District
+   329     627298.194    4329663.888    1.0     131.23245750     286.65051780   / BRO-75 / Brophy Water District
+   330     627247.120    4329369.408    1.0     126.10334300     275.69966510   / BRO-76 / Brophy Water District
+   331     626947.410    4329577.150    1.0     129.25147090     284.55549320   / BRO-77 / Brophy Water District
+   332     626437.630    4329584.911    1.0     126.90825810     281.66742860   / BRO-78 / Brophy Water District
+   333     626099.611    4329527.710    1.0     122.69816930     278.32189260   / BRO-79 / Brophy Water District
+   334     626367.113    4330298.085    1.0     131.33316320     292.41695610   / BRO-80 / Brophy Water District
+   335     627755.460    4329292.234    1.0     127.26445080     279.08718870   / BRO-83 / Brophy Water District
+   336     627856.848    4328842.265    1.0     123.51027000     267.55035060   / BRO-84 / Brophy Water District
+   337     630369.130    4329922.504    1.0     126.77507130     279.81021120   / BRO-62 / Brophy Water District
+   338     630599.232    4330397.348    1.0     126.28736030     280.90108570   / BRO-61 / Brophy Water District
+   339     630397.823    4334713.917    1.0     140.91099890     314.10221350   / BRO-09 / Brophy Water District
+   340     633102.644    4336272.799    1.0     118.79996730     296.41367520   / BRO-90 / Brophy Water District
+   341     632220.404    4335854.655    1.0     123.56098250     299.59010010   / BRO-92 / Brophy Water District
+   342     629605.005    4333821.249    1.0     149.67982670     322.38031770   / BRO-17 / Brophy Water District
+   343     628803.442    4332611.356    1.0     154.81257850     326.35857280   / BRO-101 / Brophy Water District
+   344     629077.722    4333379.540    1.0     155.36870270     327.94059140   / BRO-05 / Brophy Water District
+   345     629555.799    4332826.441    1.0     145.86411290     314.22008510   / BRO-100 / Brophy Water District
+   346     629604.646    4332538.683    1.0     145.93889240     313.77512360   / BRO-102 / Brophy Water District
+   347     629910.079    4333955.505    1.0     146.30839820     318.79786540   / BRO-16 / Brophy Water District
+   348     630791.224    4333776.866    1.0     138.41652430     309.14373780   / BRO-19 / Brophy Water District
+   349     631568.666    4334209.335    1.0     130.47504170     301.14785770   / BRO-21 / Brophy Water District
+   350     631600.111    4333807.253    1.0     130.45355060     299.52422420   / BRO-22 / Brophy Water District
+   351     631264.659    4333330.679    1.0     132.94911960     299.17089080   / BRO-23 / Brophy Water District
+   352     631578.967    4332712.609    1.0     129.64655690     293.98477170   / BRO-20 / Brophy Water District
+   353     633004.935    4331785.540    1.0     117.90766070     275.57922090   / BRO-52 / Brophy Water District
+   354     632724.419    4331268.491    1.0     117.80957170     273.40297070   / BRO-53 / Brophy Water District
+   355     630897.758    4330551.392    1.0     127.53919370     283.45356450   / BRO-63 / Brophy Water District
+   356     630867.424    4329763.043    1.0     122.97789290     275.17012020   / BRO-60 / Brophy Water District
+   357     631676.185    4331729.450    1.0     125.08539440     284.27878360   / BRO-34 / Brophy Water District
+   358     631843.514    4330585.545    1.0     120.60358300     274.07908630   / BRO-64 / Brophy Water District
+   359     631346.507    4327773.134    1.0     112.30903880     253.63560990   / BRO-66 / Brophy Water District
+   360     631671.911    4328228.856    1.0     114.16323170     255.52410130   / BRO-67 / Brophy Water District
+   361     632471.772    4329494.080    1.0     113.16332410     255.15189280   / BRO-55 / Brophy Water District
+   362     632912.854    4329491.076    1.0     112.08604620     253.19218640   / BRO-104 / Brophy Water District
+   363     633368.842    4329596.480    1.0     110.74718480     251.79380800   / BRO-54 / Brophy Water District
+   364     633865.944    4329847.203    1.0     108.57722640     252.02728100   / BRO-56A / Brophy Water District
+   365     634234.670    4329865.855    1.0     107.90730120     250.37299940   / BRO-56 / Brophy Water District
+   366     635510.634    4328985.290    1.0      99.90613086     225.53231340   / BRO-51 / Brophy Water District
+   367     634486.626    4328693.288    1.0     104.14512730     237.03130530   / BRO-49 / Brophy Water District
+   368     634741.928    4328935.926    1.0     103.16227810     235.75018480   / BRO-50 / Brophy Water District
+   369     629950.583    4327345.923    1.0     115.07444380     251.20578000   / BRO-71 / Brophy Water District
+   370     630096.540    4326711.792    1.0     110.80211710     245.52669730   / BRO-68 / Brophy Water District
+   371     631270.540    4327378.975    1.0     111.38765020     252.01183530   / BRO-65 / Brophy Water District
+   372     631774.302    4327372.588    1.0     109.95882990     252.10242460   / BRO-96 / Brophy Water District
+   373     632344.550    4327386.618    1.0     108.62007480     251.55113390   / BRO-95 / Brophy Water District
+   374     632151.754    4326984.240    1.0     107.15368500     248.00507510   / BRO-94 / Brophy Water District
+   375     630925.670    4326817.199    1.0     109.98603600     250.79413280   / BRO-97 / Brophy Water District
+   376     630851.377    4326434.935    1.0     108.29800990     251.54286380   / BRO-69 / Brophy Water District
+   377     632495.901    4325812.084    1.0     103.15545270     245.00396860   / BRO-98 / Brophy Water District
+   378     629972.278    4325733.978    1.0     107.71009160     240.76824190   / BRO-70 / Brophy Water District
+   379     627286.114    4328814.740    1.0     123.18186510     267.93582150   / BRO-81 / Brophy Water District
+   380     627646.459    4328452.940    1.0     121.38758980     262.94568380   / BRO-82 / Brophy Water District
+   381     628075.864    4328066.618    1.0     117.85380140     248.99728950   / BRO-85 / Brophy Water District
+   382     627387.434    4326928.956    1.0     110.11062140     234.17521250   / BRO-88 / Brophy Water District
+   383     627621.519    4327508.785    1.0     114.68205030     246.75627750   / BRO-87 / Brophy Water District
+   384     630691.053    4333230.359    1.0     136.87287330     304.30459980   / BRO-103 / Brophy Water District
+   385     633301.215    4345333.695    1.0     102.11405660     214.32617190   / BV-15 / Browns Valley Irrigation District
+   386     630837.511    4347767.764    1.0      99.30136013     235.62060550   / BV-08 / Browns Valley Irrigation District
+   387     631358.127    4347919.410    1.0      97.95677795     222.99475100   / BV-07 / Browns Valley Irrigation District
+   388     628788.378    4351688.772    1.0      68.28676414     214.83206180   / BV-12 / Browns Valley Irrigation District
+   389     630203.461    4350485.903    1.0      80.40160370     208.20977780   / BV-13 / Browns Valley Irrigation District
+   390     628480.979    4351175.936    1.0      68.44321103     231.95013430   / BV-16 / Browns Valley Irrigation District
+   391     628062.977    4351692.194    1.0      65.40426445     230.14865110   / BV-09 / Browns Valley Irrigation District
+   392     628094.233    4349151.950    1.0      89.72901281     273.64770510   / BV-01 / Browns Valley Irrigation District
+   393     631669.252    4325784.277    1.0     105.20616910     251.19714930   / BRO-105 / Brophy Water District
+   394     629971.852    4335825.474    1.0     140.86464480     317.05789180   / BRO-01 / Brophy Water District
+   395     629158.050    4335336.291    1.0     149.35398190     324.63748850   / BRO-02 / Brophy Water District
+   396     628831.316    4335144.331    1.0     155.32916430     330.08467610   / BRO-06 / Brophy Water District
+   397     628633.512    4334946.786    1.0     155.32916430     330.08467610   / BRO-07 / Brophy Water District
+   398     628615.595    4333708.449    1.0     159.70504340     333.95246190   / BRO-03 / Brophy Water District
+   399     634687.330    4327520.940    1.0      99.84373365     217.66157530   / BRO-48 / Brophy Water District
+   400     633735.858    4323751.421    1.0      97.98464881     238.41301470   / WWD-48 / Wheatland Water District
+   401     633929.026    4324011.553    1.0      97.27497609     232.00593570   / WWD-49 / Wheatland Water District
+   402     632962.061    4324185.363    1.0      98.67669106     247.88527490   / WWD-50 / Wheatland Water District
+   403     633832.372    4325032.720    1.0      98.33103180     227.24205400   / WWD-51 / Wheatland Water District
+   404     634164.023    4325046.402    1.0      97.34510326     218.32823180   / WWD-52 / Wheatland Water District
+   405     633939.497    4325639.900    1.0      99.13323784     226.11920740   / WWD-53 / Wheatland Water District
+   406     633916.426    4325559.108    1.0      98.80833626     227.19982150   / WWD-55 / Wheatland Water District
+   407     635064.228    4325589.403    1.0      96.20906512     199.45843120   / WWD-54 / Wheatland Water District
+   408     633282.176    4325161.650    1.0      99.27361382     238.34330580   / WWD-56 / Wheatland Water District
+   409     626856.592    4328650.370    1.0     119.72597000     265.45627850   / BRO-77A / Brophy Water District
+   410     633949.662    4331935.899    1.0     112.37895830     267.33282750   / BRO-106 / Brophy Water District
+   411     635511.834    4327310.781    1.0      97.22837448     201.54540060   / BRO-38 / Brophy Water District
+   412     635525.193    4326561.150    1.0      96.16610794     191.90822750   / BRO-39 / Brophy Water District
+   413     635380.157    4326021.727    1.0      95.30578613     184.51255970   / BRO-40 / Brophy Water District
+   414     634903.142    4325906.713    1.0      97.31745783     204.15315250   / BRO-41 / Brophy Water District
+   415     633944.479    4325875.223    1.0      99.83095398     227.93275450   / BRO-42 / Brophy Water District
+   416     633598.884    4325852.621    1.0     100.66899620     234.67758180   / BRO-43 / Brophy Water District
+   417     632931.248    4326164.516    1.0     102.71309010     242.93433490   / BRO-44 / Brophy Water District
+   418     633772.558    4327170.685    1.0     103.00142160     236.44582790   / BRO-45 / Brophy Water District
+   419     633371.086    4327161.747    1.0     104.11661700     239.34388050   / BRO-46 / Brophy Water District
+   420     628200.243    4352174.556    1.0      64.33935686     214.92956540   / BV-17 / Browns Valley Irrigation District
+   421     632980.626    4327151.922    1.0     105.34029610     243.68037630   / BRO-59 / Brophy Water District
+   422     633135.072    4328107.962    1.0     107.97459030     248.29029690   / BRO-58 / Brophy Water District
+   423     632152.042    4334451.975    1.0     126.04068180     297.24253460   / BRO-99 / Brophy Water District
+   424     630858.156    4327869.256    1.0     115.25049510     256.63940940   / BRO-72 / Brophy Water District
+   425     630685.250    4328552.239    1.0     118.48881050     262.41146470   / BRO-72A / Brophy Water District
+   426     627483.179    4351503.840    1.0      64.97777264     252.93597410   / BV-14 / Browns Valley Irrigation District
+   427     633880.452    4317310.459    1.0      92.68160629     359.26485600   / GO-07 / Dry Creek Mutual Water Company
+   428     633496.026    4317033.020    1.0      93.85686323     356.63236490   / GO-06 / Dry Creek Mutual Water Company
+   429     633180.212    4316922.426    1.0      95.06360881     355.43113200   / GO-08 / Dry Creek Mutual Water Company
+   430     634025.606    4318793.494    1.0      92.87710762     326.20654680   / SRI-02 / Dry Creek Mutual Water Company
+   431     633747.750    4318251.494    1.0      94.26174622     339.65337520   / SRI-01 / Dry Creek Mutual Water Company
+   432     634874.312    4317368.570    1.0      89.25634072     335.69152830   / CWS-02 / Dry Creek Mutual Water Company
+   433     634496.661    4317620.220    1.0      90.50360235     338.85610960   / CWS-01 / Dry Creek Mutual Water Company
+   434     635546.765    4317913.492    1.0      88.16310883     313.88995360   / MCS-01 / Dry Creek Mutual Water Company
+   435     631558.210    4320883.153    1.0      98.83083937     287.94973750   / JC-01 / Dry Creek Mutual Water Company
+   436     631332.626    4321277.279    1.0      99.62267997     277.73122340   / JIS-01 / Dry Creek Mutual Water Company
+   437     631945.684    4319751.409    1.0      98.30408173     305.47694090   / JC-03 / Dry Creek Mutual Water Company
+   438     636067.222    4317639.021    1.0      87.00140381     303.38580320   / MCS-02 / Dry Creek Mutual Water Company
+   439     636948.904    4318128.761    1.0      86.63680140     284.73590090   / DVF-01 / Dry Creek Mutual Water Company
+   440     634443.449    4319331.075    1.0      91.61478806     312.46825260   / CWS-03 / Dry Creek Mutual Water Company
+   441     634203.997    4320238.805    1.0      93.75617218     291.06571450   / NS-02 / Dry Creek Mutual Water Company
+   442     634627.573    4319030.786    1.0      92.19481320     322.23787770   / NS-01 / Dry Creek Mutual Water Company
+   443     633405.716    4320536.144    1.0      94.61798223     288.75535330   / LR-01 / Dry Creek Mutual Water Company
+   444     633102.566    4320372.727    1.0      95.05973358     295.25221250   / HG-01 / Dry Creek Mutual Water Company
+   445     632444.617    4320496.070    1.0      96.87880707     291.39595410   / JC-02 / Dry Creek Mutual Water Company
+   446     631804.343    4320409.036    1.0      98.48018222     292.99093630   / JW-01 / Dry Creek Mutual Water Company
+   447     631278.895    4322332.019    1.0     100.52626290     263.35245260   / CR-02 / Dry Creek Mutual Water Company
+   448     630638.239    4322501.938    1.0     101.64748080     252.69098820   / CR-01 / Dry Creek Mutual Water Company
+   449     634336.541    4319858.674    1.0      93.37268575     297.06808980   / BS-01 / Dry Creek Mutual Water Company
+   450     634225.433    4318684.714    1.0      93.65917587     328.67892840   / DW-01 / Dry Creek Mutual Water Company
+   451     634793.196    4319963.396    1.0      92.69977417     293.89151000   / JS-01 / Dry Creek Mutual Water Company
+   452     630997.648    4317266.023    1.0     101.62378280     345.11286100   / WWR-06 / Dry Creek Mutual Water Company
+   453     625775.977    4341558.556    1.0     121.05445190     313.50548170   / HAL-05 / Hallwood Irrigation Company
+   454     625756.544    4341608.683    1.0     122.70090610     314.34561920   / HAL-04 / Hallwood Irrigation Company
+   455     624028.220    4340726.336    1.0      99.85230764     305.76605900   / HAL-06 / Hallwood Irrigation Company
+   456     623791.872    4337717.536    1.0     104.97947180     296.97252400   / HAL-07 / Hallwood Irrigation Company
+   457     627903.364    4341429.116    1.0     132.36195560     317.21817780   / HAL-03 / Hallwood Irrigation Company
+   458     625336.904    4350520.299    1.0      75.84707928     326.64700320   / RAM-08 / Ramirez Water District
+   459     625873.965    4350586.853    1.0      73.90302531     323.54711910   / RAM-09 / Ramirez Water District
+   460     627068.958    4350476.908    1.0      74.89532948     289.25787350   / RAM-28 / Ramirez Water District
+   461     627475.225    4350330.348    1.0      75.84016724     276.31298830   / RAM-27 / Ramirez Water District
+   462     626819.740    4349735.830    1.0      80.64488983     305.86196900   / RAM-29 / Ramirez Water District
+   463     626781.136    4348914.877    1.0      90.78023148     321.27813720   / RAM-30 / Ramirez Water District
+   464     626543.918    4347583.147    1.0     104.21572220     340.72309220   / RAM-31 / Ramirez Water District
+   465     624088.751    4347616.197    1.0      86.34148216     330.10373690   / RAM-14 / Ramirez Water District
+   466     624101.873    4348141.211    1.0      84.98984222     332.62521970   / RAM-13 / Ramirez Water District
+   467     624076.045    4348527.304    1.0      81.49870647     339.08195910   / RAM-17 / Ramirez Water District
+   468     624370.606    4348872.155    1.0      83.26547750     341.88953650   / RAM-16 / Ramirez Water District
+   469     623192.114    4348911.167    1.0      75.71735975     332.84995520   / RAM-15 / Ramirez Water District
+   470     635937.678    4323565.279    1.0      93.59633151     162.75219030   / WWD-01 / Wheatland Water District
+   471     636285.706    4322878.877    1.0      91.76336755     174.99868770   / WWD-02 / Wheatland Water District
+   472     636691.808    4323387.754    1.0      90.66799164     142.74435640   / WWD-03 / Wheatland Water District
+   473     627812.080    4350712.520    1.0      71.44402949     260.06539920   / BV-10 / Browns Valley Irrigation District
+   474     627766.846    4350616.674    1.0      73.04949188     260.06539920   / BV-11 / Browns Valley Irrigation District
+   475     628242.340    4349677.579    1.0      82.23911190     267.56762700   / BV-03 / Browns Valley Irrigation District
+   476     628087.518    4348327.291    1.0     100.00569090     286.03460690   / BV-02 / Browns Valley Irrigation District
+   477     633192.736    4344918.893    1.0     103.38509850     223.01055910   / BV-05 / Browns Valley Irrigation District
+   478     627967.900    4318698.898    1.0     105.50558470     329.02423480   / MR-07 / South Yuba Water District
+   479     628449.038    4319530.527    1.0     103.22180460     295.96693420   / MR-11 / South Yuba Water District
+   480     630399.760    4319771.447    1.0     101.03060600     303.73597460   / NR-01 / South Yuba Water District
+   481     631194.761    4319966.179    1.0      99.82153765     302.31424460   / NR-03 / South Yuba Water District
+   482     627850.969    4317350.502    1.0     109.77635960     373.76586640   / RO-01 / South Yuba Water District
+   483     627295.757    4317350.127    1.0     109.31192780     367.76173570   / RO-02 / South Yuba Water District
+   484     627761.959    4317999.924    1.0     107.21677400     344.79879760   / RO-03 / South Yuba Water District
+   485     627701.975    4318408.912    1.0     106.36293570     331.25681850   / RO-04 / South Yuba Water District
+   486     627233.945    4317895.151    1.0     107.80181500     351.64996340   / RO-05 / South Yuba Water District
+   487     627781.695    4315778.680    1.0     114.65517960     413.48109130   / SO-01 / South Yuba Water District
+   488     627686.505    4316168.036    1.0     112.99459550     400.20262150   / SO-02 / South Yuba Water District
+   489     630350.144    4320800.227    1.0     101.00281170     279.36631420   / VG-01 / South Yuba Water District
+   490     630029.739    4322501.629    1.0     102.08858380     244.33671350   / VG-02 / South Yuba Water District
+   491     629798.857    4320549.111    1.0     101.47159580     272.77605920   / VG-03 / South Yuba Water District
+   492     630821.031    4320718.134    1.0     100.43941500     282.40608600   / NR-04 / South Yuba Water District
+   493     630328.835    4319910.603    1.0     101.22798870     296.13954380   / NR-06 / South Yuba Water District
+   494     630004.448    4319641.667    1.0     101.73131280     300.46018290   / NR-07 / South Yuba Water District
+   495     631420.383    4319527.252    1.0      99.10619493     308.34985630   / NR-08 / South Yuba Water District
+   496     637187.215    4323284.347    1.0      89.94709969     142.54045680   / WWD-21 / Wheatland Water District
+   497     637748.169    4323070.116    1.0      88.10926225     149.68771530   / WWD-22 / Wheatland Water District
+   498     637950.451    4322705.945    1.0      87.20608807     168.79305650   / WWD-23 / Wheatland Water District
+   499     638279.311    4323854.569    1.0      86.59928046     149.50793970   / WWD-24 / Wheatland Water District
+   500     639951.366    4324813.647    1.0      78.77306196     198.59505720   / WWD-27 / Wheatland Water District
+   501     637178.020    4324174.048    1.0      90.27598156     130.91125350   / WWD-31 / Wheatland Water District
+   502     635578.004    4324047.330    1.0      95.06878662     172.41813470   / WWD-35 / Wheatland Water District
+   503     635579.979    4323765.988    1.0      94.32856920     168.34920250   / WWD-36 / Wheatland Water District
+   504     635680.222    4325092.740    1.0      93.61702867     171.14483370   / WWD-37 / Wheatland Water District
+   505     636360.079    4325115.961    1.0      91.50536092     151.60038380   / WWD-38 / Wheatland Water District
+   506     626895.764    4320725.092    1.0     102.72481160     258.27035520   / BB-01 / South Yuba Water District
+   507     626947.720    4320067.341    1.0     103.63868050     278.06249240   / BB-02 / South Yuba Water District
+   508     626354.803    4319527.556    1.0     102.69618840     293.70491640   / BB-03 / South Yuba Water District
+   509     629989.615    4317478.299    1.0     104.71459410     352.48866690   / FRB-01 / South Yuba Water District
+   510     629385.885    4317693.258    1.0     106.19802320     355.35811770   / FRB-02 / South Yuba Water District
+   511     629286.311    4316810.626    1.0     108.34593890     374.23236080   / G-01 / South Yuba Water District
+   512     628574.615    4317570.428    1.0     107.74045560     363.24163380   / G-02 / South Yuba Water District
+   513     628698.801    4340837.973    1.0     128.70052660     315.69058230   / HAL-02 / Hallwood Irrigation Company
+   514     629138.529    4341139.236    1.0     128.56964450     316.19748260   / HAL-08 / Hallwood Irrigation Company
+   515     630151.550    4340869.679    1.0     124.63092890     314.04852290   / HAL-01 / Hallwood Irrigation Company
+   516     623850.630    4336245.291    1.0     108.75660070     296.86424760   / HAL-10 / Hallwood Irrigation Company
+   517     628735.738    4340865.443    1.0     128.70052660     315.69058230   / HAL-09 / Hallwood Irrigation Company
+   518     625847.484    4347156.321    1.0     104.51717220     332.56760250   / RAM-26 / Ramirez Water District
+   519     624948.111    4347919.027    1.0      91.69042587     338.10013960   / RAM-19 / Ramirez Water District
+   520     625384.336    4347940.053    1.0      93.19410610     340.46551900   / RAM-24 / Ramirez Water District
+   521     625954.349    4347954.129    1.0      95.88792637     342.74643380   / RAM-23 / Ramirez Water District
+   522     625835.326    4347244.075    1.0     102.45951080     334.83812870   / RAM-25 / Ramirez Water District
+   523     625985.269    4349206.246    1.0      85.50632985     334.66165160   / RAM-10 / Ramirez Water District
+   524     625205.422    4349087.095    1.0      85.25080032     353.08461000   / RAM-11 / Ramirez Water District
+   525     625866.301    4352081.189    1.0      67.74317030     286.00482180   / RAM-04 / Ramirez Water District
+   526     625334.125    4351605.037    1.0      70.37011464     300.63662720   / RAM-05 / Ramirez Water District
+   527     624332.228    4350508.185    1.0      74.35560354     348.62872310   / RAM-07 / Ramirez Water District
+   528     623588.405    4349767.794    1.0      74.60802714     340.97353450   / RAM-12 / Ramirez Water District
+   529     628472.410    4322843.930    1.0     101.46919500     212.59871930   / H-01 / South Yuba Water District
+   530     627902.303    4322013.144    1.0     102.16512300     227.05469360   / H-13 / South Yuba Water District
+   531     628508.372    4321473.598    1.0     101.79109450     243.42471820   / H-20 / South Yuba Water District
+   532     627727.288    4321141.488    1.0     102.20049130     242.83685300   / H-21 / South Yuba Water District
+   533     627501.193    4320790.056    1.0     102.82704760     257.43978880   / H-23 / South Yuba Water District
+   534     627094.278    4322768.055    1.0     102.03664820     212.37798560   / H-05 / South Yuba Water District
+   535     626193.824    4324909.657    1.0     101.30460700     218.05453320   / JA-01 / South Yuba Water District
+   536     627471.349    4324658.649    1.0     105.90311540     202.83667430   / JA-02 / South Yuba Water District
+   537     627850.131    4324662.935    1.0     104.22166950     202.99805700   / JA-03 / South Yuba Water District
+   538     628469.207    4323237.865    1.0     101.84922490     208.14255370   / JA-04 / South Yuba Water District
+   539     627925.395    4323231.492    1.0     101.73983310     204.66534880   / JA-05 / South Yuba Water District
+   540     628355.854    4320693.147    1.0     102.10899640     266.36999510   / MR-01 / South Yuba Water District
+   541     629812.947    4319041.383    1.0     102.49272330     316.22347010   / MR-02 / South Yuba Water District
+   542     630024.488    4318622.523    1.0     102.91231710     329.93610640   / MR-03 / South Yuba Water District
+   543     629460.404    4318741.695    1.0     103.26482560     323.67058310   / MR-04 / South Yuba Water District
+   544     628630.088    4318622.903    1.0     104.85336390     332.53590560   / MR-05 / South Yuba Water District
+   545     631475.217    4320246.030    1.0      98.93588172     295.34803600   / JW-02 / Dry Creek Mutual Water Company
+   546     633355.829    4328263.465    1.0     106.81533050     244.57285880   / BRO-51A / Brophy Water District
+   547     630550.696    4328903.336    1.0     118.62616640     265.21303640   / BRO-112 / Brophy Water District
+   548     630144.580    4332673.693    1.0     141.51470440     308.13376190   / BRO-113 / Brophy Water District
+   549     630913.344    4320540.580    1.0     100.21367420     289.78367000   / NR-02 / South Yuba Water District
+   550     628462.898    4323939.142    1.0     102.91087340     204.22988670   / JA-07 / South Yuba Water District
+   551     628167.166    4324678.740    1.0     104.22697940     204.54796600   / JA-06 / South Yuba Water District
+   552     627008.563    4323973.331    1.0     103.15449940     204.33298840   / JA-08 / South Yuba Water District
+   553     630393.051    4333770.073    1.0     141.11225210     311.82399160   / BRO-109 / Brophy Water District
+   554     624388.630    4348126.093    1.0      86.23575869     336.58417030   / RAM-18 / Ramirez Water District
+   555     631062.189    4317550.874    1.0     101.62378280     345.11286100   / WWR-07 / Dry Creek Mutual Water Company
+   556     627128.663    4350898.416    1.0      69.49740542     271.79290770   / BV-18 / Browns Valley Irrigation District
+   557     632682.477    4321469.643    1.0      96.91012955     276.68854900   / JR-01 / Dry Creek Mutual Water Company
+   558     633203.555    4321291.571    1.0      96.21963416     275.42027790   / JR-02 / Dry Creek Mutual Water Company
+   559     628974.814    4331852.246    1.0     148.85125640     316.83016400   / BRO-110 / Brophy Water District
+   560     628827.422    4350515.052    1.0      74.54263130     238.63635250   / BV-19 / Browns Valley Irrigation District
+   561     633481.003    4318117.636    1.0      95.27399902     336.01521910   / SD-01 / Dry Creek Mutual Water Company
+   562     631986.486    4342294.547    1.0     116.05508730     311.03565060   / COR-28 / Cordua Irrigation District
+   563     629670.213    4345654.645    1.0     119.98000790     307.17095950   / BV-21 / Browns Valley Irrigation District
+   564     629179.417    4351537.402    1.0      69.95770046     212.53030400   / BV-20 / Browns Valley Irrigation District
+   565     623756.830    4345379.808    1.0      93.28377672     316.65643870   / COR-24 / Cordua Irrigation District
+   566     629289.868    4323257.636    1.0     103.52281740     223.18770530   / H-24 / South Yuba Water District
+   567     629304.002    4322502.790    1.0     102.34472030     231.05203250   / H-25 / South Yuba Water District
+   568     633829.372    4331094.319    1.0     111.90784450     262.70599370   / BRO-111 / Brophy Water District
+   569     622900.728    4344836.606    1.0      83.26824722     310.20232540   / COR-29 / Cordua Irrigation District
+   570     627376.183    4345517.740    1.0     134.07876280     321.08328550   / COR-31 / Cordua Irrigation District
+   571     630405.497    4316325.402    1.0     106.45144590     369.66942660   / ROG-02 / Dry Creek Mutual Water Company
+   572     630929.978    4316568.803    1.0     105.13250580     365.51214190   / ROG-01 / Dry Creek Mutual Water Company
+   573     631396.710    4317414.257    1.0     100.59613580     343.17157420   / WWR-05 / Dry Creek Mutual Water Company
+   574     632166.475    4316728.361    1.0     100.09985690     355.05299550   / WWR-01 / Dry Creek Mutual Water Company
+   575     632722.973    4317255.124    1.0      97.17362518     348.70373540   / WWR-02 / Dry Creek Mutual Water Company
+   576     633563.883    4317706.576    1.0      94.84983995     346.01209170   / WWR-03 / Dry Creek Mutual Water Company
+   577     633164.427    4317521.512    1.0      95.86956363     344.29766510   / GO-09 / Dry Creek Mutual Water Company
+   578     632743.379    4317645.336    1.0      97.36826515     342.88495250   / GO-03 / Dry Creek Mutual Water Company
+   579     632852.495    4318165.761    1.0      96.64188470     333.87771270   / GO-04 / Dry Creek Mutual Water Company
+   580     632713.428    4318928.909    1.0      95.72816903     319.99612430   / WWR-04 / Dry Creek Mutual Water Company
+   581     634283.033    4317568.700    1.0      91.50007439     349.21649170   / GO-05 / Dry Creek Mutual Water Company
+   582     636774.033    4323113.025    1.0      90.57434006     149.06174160   / WWD-04 / Wheatland Water District
+   583     637050.011    4322660.774    1.0      89.14635754     159.76985550   / WWD-05 / Wheatland Water District
+   584     637674.082    4323547.609    1.0      88.31207021     138.36582270   / WWD-06 / Wheatland Water District
+   585     638003.142    4323717.663    1.0      87.30732727     142.49526470   / WWD-07 / Wheatland Water District
+   586     637652.924    4321464.239    1.0      87.44449425     213.00905230   / WWD-08 / Wheatland Water District
+   587     637852.676    4320710.723    1.0      89.52742658     248.60177830   / WWD-09 / Wheatland Water District
+   588     638913.961    4322546.756    1.0      83.30880547     197.15830230   / WWD-10 / Wheatland Water District
+   589     639229.459    4322961.387    1.0      82.38237000     193.35636730   / WWD-11 / Wheatland Water District
+   590     630852.256    4321701.194    1.0     100.63110000     266.82730660   / JIS-02 / Dry Creek Mutual Water Company
+   591     626932.210    4321947.827    1.0     101.22402190     230.08549500   / H-04 / South Yuba Water District
+   592     630549.130    4318597.950    1.0     102.02853240     329.81173710   / NR-09 / South Yuba Water District
+   593     629910.263    4318857.840    1.0     102.71842530     323.49051580   / MR-08 / South Yuba Water District
+   594     628200.634    4317577.391    1.0     108.80095390     366.07859800   / MR-06 / South Yuba Water District
+   595     627842.373    4317760.838    1.0     108.60537970     361.41943360   / RO-06 / South Yuba Water District
+   596     627688.993    4319354.236    1.0     105.47309280     301.68092850   / MR-09 / South Yuba Water District
+   597     627700.324    4319256.784    1.0     105.47309280     301.68092850   / MR-10 / South Yuba Water District
+   598     627779.300    4316528.598    1.0     112.55881170     395.28516500   / SO-03 / South Yuba Water District
+   599     635215.123    4323587.462    1.0      95.42202759     191.83881290   / WWD-44 / Wheatland Water District
+   600     634779.327    4323019.007    1.0      95.65982819     212.65274200   / WWD-45 / Wheatland Water District
+   601     634300.842    4324251.163    1.0      95.59838791     213.43069920   / WWD-46 / Wheatland Water District
+   602     633476.700    4323400.889    1.0      98.01659088     247.06759640   / WWD-47 / Wheatland Water District
+   603     634361.080    4330146.294    1.0     107.57813940     250.57950170   / BRO-107 / Brophy Water District
+   604     629183.110    4351772.632    1.0      68.61145782     204.83523560   / BV-22 / Browns Valley Irrigation District
+   605     633055.396    4336552.750    1.0     117.16362970     295.91325380   / T-01 / Brophy Water District
+   606     635767.649    4318051.741    1.0      87.58631966     309.56958010   / BPF-01 / Dry Creek Mutual Water Company
+   607     633072.373    4337080.558    1.0     116.78470990     296.96651710   / BRO-91 / Brophy Water District
+   608     633213.178    4336761.631    1.0     116.78470990     296.96651710   / BRO-93 / Brophy Water District
+   609     626048.998    4346569.659    1.0     111.08623500     330.18030220   / COR-07 / Cordua Irrigation District
+   610     635013.665    4319483.440    1.0      90.83738154     309.53065910   / SD-02 / Dry Creek Mutual Water Company
+C*******************************************************************************
+C                        Well Pumping Characteristics
+C
+C   ID       ; Well identification number
+C   ICOLWL   ; Well pumping - this number corresponds to the appropriate data column
+C               in the Time Series Pumping File
+C               * Enter 0 if pumping will not be read from the Time Series
+C                  Pumping File (for instance, in a situation where pumping is 
+C                  calculated by an external program)
+C   FRACWL   ; Relative proportion of the pumping in column ICOLWL to be applied 
+C               to well ID
+C   IOPTWL   ; Option for distribution of pumping at the delivery destination
+C               0 = to distribute the pumping according to the given relative
+C                     fraction, FRACWL
+C               1 = to distribute the pumping in proportion to FRACWL
+C                     times the total area of the destination for pumping
+C               2 = to distribute the pumping in proportion to FRACWL
+C                     times the developed area (ag. and urban) at the destination 
+C                     for pumping
+C               3 = to distribute the pumping in proportion to FRACWL
+C                     times the ag. area at the destination for pumping
+C               4 = to distribute the pumping in proportion to FRACWL
+C                     times the urban area at the destination for pumping
+C   TYPDSTWL ; Destination where the pumping is delivered to 
+C              -1 = pumping is used in the same element that pumping occurs
+C               0 = Pumping goes outside the model domain
+C               2 = Pumping goes to element DSTWL (see below)
+C               4 = Pumping goes to subregion DSTWL (see below)
+C               6 = Pumping goes to a group of elements with ID DSTDL 
+C                     (element groups are listed after this section)
+C   DSTWL    ; Destination number for well pumping delivery
+C               * Enter any number if TYPDSTWL is set to -1 or 0
+C   ICFIRIGWL; Fraction of the pumping that is used for irrigation purposes -
+C               this number corresponds to the appropriate data column in the 
+C               Irrigation Fractions Data File 
+C               * Enter 0 if pumping is delivered outside the model domain
+C   ICADJWL  ; Supply adjustment specification - this number corresponds to 
+C               the data column in the Supply Adjustment Specifications 
+C               Data File
+C               * Enter 0 if well pumping will not be adjusted
+C   ICWLMAX  ; Maximum pumping amount - this number corresponds to the 
+C               appropriate data column in the Time Series Pumping File
+C               * Enter 0 if a maximum pumping amount does not apply
+C   FWLMAX   ; Fraction of data value specified in column ICWLMAX to be used as
+C               maximum pumping amount
+C
+C--------------------------------------------------------------------------------------------------
+C     ID  ICOLWL  FRACWL  IOPTWL  TYPDSTWL DSTWL  ICFIRIGWL ICADJWL ICWLMAX  FWLMAX
+C--------------------------------------------------------------------------------------------------
+       1      43     1.0       3       6      25       1       0      43     1.0
+       2      44     1.0       3       6      25       1       0      44     1.0
+       3      45     1.0       3       6      25       1       0      45     1.0
+       4      46     1.0       3       6      25       1       0      46     1.0
+       5      47     1.0       3       6      23       1       0      47     1.0
+       6      48     1.0       3       6      23       1       0      48     1.0
+       7      49     1.0       3       6      20       1       0      49     1.0
+       8      50     1.0       3       6      20       1       0      50     1.0
+       9      51     1.0       3       6      20       1       0      51     1.0
+      10      52     1.0       3       6      20       1       0      52     1.0
+      11      53     1.0       3       6      20       1       0      53     1.0
+      12      54     1.0       3       6      20       1       0      54     1.0
+      13      55     1.0       3       6      20       1       0      55     1.0
+      14      56     1.0       3       6      20       1       0      56     1.0
+      15      57     1.0       3       6      20       1       0      57     1.0
+      16      58     1.0       3       6      14       1       0      58     1.0
+      17      59     1.0       3       6      14       1       0      59     1.0
+      18      60     1.0       3       6      14       1       0      60     1.0
+      19      61     1.0       3       6      14       1       0      61     1.0
+      20      62     1.0       3       6      14       1       0      62     1.0
+      21      63     1.0       3       6      14       1       0      63     1.0
+      22      64     1.0       3       6      13       1       0      64     1.0
+      23      65     1.0       3       6      13       1       0      65     1.0
+      24      66     1.0       3       6      13       1       0      66     1.0
+      25      67     1.0       3       6      13       1       0      67     1.0
+      26      68     1.0       3       6      13       1       0      68     1.0
+      27      69     1.0       3       6      13       1       0      69     1.0
+      28      70     1.0       3       6      13       1       0      70     1.0
+      29      71     1.0       3       6      13       1       0      71     1.0
+      30      72     1.0       3       6      13       1       0      72     1.0
+      31      73     1.0       3       6      13       1       0      73     1.0
+      32      74     1.0       3       6      13       1       0      74     1.0
+      33      75     1.0       3       6      13       1       0      75     1.0
+      34      76     1.0       3       6      13       1       0      76     1.0
+      35      77     1.0       3       6      13       1       0      77     1.0
+      36      78     1.0       3       6      13       1       0      78     1.0
+      37      79     1.0       3       6      13       1       0      79     1.0
+      38      80     1.0       3       6      13       1       0      80     1.0
+      39      81     1.0       3       6      13       1       0      81     1.0
+      40      82     1.0       3       6      13       1       0      82     1.0
+      41      83     1.0       3       6      13       1       0      83     1.0
+      42      84     1.0       3       6      13       1       0      84     1.0
+      43      85     1.0       3       6      13       1       0      85     1.0
+      44      86     1.0       3       6      13       1       0      86     1.0
+      45      87     1.0       3       6      13       1       0      87     1.0
+      46      88     1.0       3       6      13       1       0      88     1.0
+      47      89     1.0       3       6      13       1       0      89     1.0
+      48      90     1.0       3       6      13       1       0      90     1.0
+      49      91     1.0       3       6      13       1       0      91     1.0
+      50      92     1.0       3       6      13       1       0      92     1.0
+      51      93     1.0       3       6      13       1       0      93     1.0
+      52      94     1.0       3       6      12       1       0      94     1.0
+      53      95     1.0       3       6      12       1       0      95     1.0
+      54      96     1.0       3       6      11       1       0      96     1.0
+      55      97     1.0       3       6      11       1       0      97     1.0
+      56      98     1.0       3       6      11       1       0      98     1.0
+      57      99     1.0       3       6      11       1       0      99     1.0
+      58     100     1.0       3       6      10       1       0     100     1.0
+      59     101     1.0       3       6      10       1       0     101     1.0
+      60     102     1.0       3       6      10       1       0     102     1.0
+      61     103     1.0       3       6      10       1       0     103     1.0
+      62     104     1.0       3       6      10       1       0     104     1.0
+      63     105     1.0       3       6      10       1       0     105     1.0
+      64     106     1.0       3       6      10       1       0     106     1.0
+      65     107     1.0       3       6      10       1       0     107     1.0
+      66     108     1.0       3       6      10       1       0     108     1.0
+      67     109     1.0       3       6      10       1       0     109     1.0
+      68     110     1.0       3       6      10       1       0     110     1.0
+      69     111     1.0       3       6      10       1       0     111     1.0
+      70     112     1.0       3       6      10       1       0     112     1.0
+      71     113     1.0       3       6      10       1       0     113     1.0
+      72     114     1.0       3       6      10       1       0     114     1.0
+      73     115     1.0       3       6      10       1       0     115     1.0
+      74     116     1.0       3       6      10       1       0     116     1.0
+      75     117     1.0       3       6      10       1       0     117     1.0
+      76     118     1.0       3       6      10       1       0     118     1.0
+      77     119     1.0       3       6      10       1       0     119     1.0
+      78     120     1.0       3       6      10       1       0     120     1.0
+      79     121     1.0       3       6      10       1       0     121     1.0
+      80     122     1.0       3       6      10       1       0     122     1.0
+      81     123     1.0       3       6      10       1       0     123     1.0
+      82     124     1.0       3       6      10       1       0     124     1.0
+      83     125     1.0       3       6       8       1       0     125     1.0
+      84     126     1.0       3       6       8       1       0     126     1.0
+      85     127     1.0       3       6       8       1       0     127     1.0
+      86     128     1.0       3       6       8       1       0     128     1.0
+      87     129     1.0       3       6       8       1       0     129     1.0
+      88     130     1.0       3       6       5       1       0     130     1.0
+      89     131     1.0       3       6       5       1       0     131     1.0
+      90     132     1.0       3       6       5       1       0     132     1.0
+      91     133     1.0       3       6       5       1       0     133     1.0
+      92     134     1.0       3       6       5       1       0     134     1.0
+      93     135     1.0       3       6       5       1       0     135     1.0
+      94     136     1.0       3       6       5       1       0     136     1.0
+      95     137     1.0       3       6       5       1       0     137     1.0
+      96     138     1.0       3       6       5       1       0     138     1.0
+      97     139     1.0       3       6       5       1       0     139     1.0
+      98     140     1.0       3       6       5       1       0     140     1.0
+      99     141     1.0       3       6       5       1       0     141     1.0
+     100     142     1.0       3       6       5       1       0     142     1.0
+     101     143     1.0       3       6       5       1       0     143     1.0
+     102     144     1.0       3       6       5       1       0     144     1.0
+     103     145     1.0       3       6       5       1       0     145     1.0
+     104     146     1.0       3       6       5       1       0     146     1.0
+     105     147     1.0       3       6       5       1       0     147     1.0
+     106     148     1.0       3       6       5       1       0     148     1.0
+     107     149     1.0       3       6       5       1       0     149     1.0
+     108     150     1.0       3       6       5       1       0     150     1.0
+     109     151     1.0       3       6       5       1       0     151     1.0
+     110     152     1.0       3       6       5       1       0     152     1.0
+     111     153     1.0       3       6       5       1       0     153     1.0
+     112     154     1.0       3       6       5       1       0     154     1.0
+     113     155     1.0       3       6       6       1       0     155     1.0
+     114     156     1.0       3       6       6       1       0     156     1.0
+     115     157     1.0       3       6       6       1       0     157     1.0
+     116     158     1.0       3       6       6       1       0     158     1.0
+     117     159     1.0       3       6       6       1       0     159     1.0
+     118     160     1.0       3       6       6       1       0     160     1.0
+     119     161     1.0       3       6       6       1       0     161     1.0
+     120     162     1.0       3       6       6       1       0     162     1.0
+     121     163     1.0       3       6       6       1       0     163     1.0
+     122     164     1.0       3       6       6       1       0     164     1.0
+     123     165     1.0       3       6       6       1       0     165     1.0
+     124     166     1.0       3       6       6       1       0     166     1.0
+     125     167     1.0       3       6       6       1       0     167     1.0
+     126     168     1.0       3       6       6       1       0     168     1.0
+     127     169     1.0       3       6       6       1       0     169     1.0
+     128     170     1.0       3       6       6       1       0     170     1.0
+     129     171     1.0       3       6       6       1       0     171     1.0
+     130     172     1.0       3       6       6       1       0     172     1.0
+     131     173     1.0       3       6       6       1       0     173     1.0
+     132     174     1.0       3       6       6       1       0     174     1.0
+     133     175     1.0       3       6       6       1       0     175     1.0
+     134     176     1.0       3       6       6       1       0     176     1.0
+     135     177     1.0       3       6       6       1       0     177     1.0
+     136     178     1.0       3       6       6       1       0     178     1.0
+     137     179     1.0       3       6       6       1       0     179     1.0
+     138     180     1.0       3       6       6       1       0     180     1.0
+     139     181     1.0       3       6      26       1       0     181     1.0
+     140     182     1.0       3       6      26       1       0     182     1.0
+     141     183     1.0       3       6      26       1       0     183     1.0
+     142     184     1.0       3       6      19       1       0     184     1.0
+     143     185     1.0       3       6       2       1       0     185     1.0
+     144     186     1.0       3       6       2       1       0     186     1.0
+     145     187     1.0       3       6       9       1       0     187     1.0
+     146     188     1.0       3       6       9       1       0     188     1.0
+     147     189     1.0       3       6       9       1       0     189     1.0
+     148     190     1.0       3       6       9       1       0     190     1.0
+     149     191     1.0       3       6       9       1       0     191     1.0
+     150     192     1.0       3       6       9       1       0     192     1.0
+     151     193     1.0       3       6       9       1       0     193     1.0
+     152     194     1.0       3       6       9       1       0     194     1.0
+     153     195     1.0       3       6       9       1       0     195     1.0
+     154     196     1.0       3       6       9       1       0     196     1.0
+     155     197     1.0       3       6       9       1       0     197     1.0
+     156     198     1.0       3       6       9       1       0     198     1.0
+     157     199     1.0       3       6       9       1       0     199     1.0
+     158     200     1.0       3       6       9       1       0     200     1.0
+     159     201     1.0       3       6       9       1       0     201     1.0
+     160     202     1.0       3       6       9       1       0     202     1.0
+     161     203     1.0       3       6       9       1       0     203     1.0
+     162     204     1.0       3       6       9       1       0     204     1.0
+     163     205     1.0       3       6       9       1       0     205     1.0
+     164     206     1.0       3       6       9       1       0     206     1.0
+     165     207     1.0       3       6       9       1       0     207     1.0
+     166     208     1.0       3       6       9       1       0     208     1.0
+     167     209     1.0       3       6       3       1       0     209     1.0
+     168     210     1.0       3       6       3       1       0     210     1.0
+     169     211     1.0       3       6      24       1       0     211     1.0
+     170     212     1.0       3       6      24       1       0     212     1.0
+     171     213     1.0       3       6      17       1       0     213     1.0
+     172     214     1.0       3       6      17       1       0     214     1.0
+     173     215     1.0       3       6      17       1       0     215     1.0
+     174     216     1.0       3       6      17       1       0     216     1.0
+     175     217     1.0       3       6      17       1       0     217     1.0
+     176     218     1.0       3       6      17       1       0     218     1.0
+     177     219     1.0       3       6      17       1       0     219     1.0
+     178     220     1.0       3       6      17       1       0     220     1.0
+     179     221     1.0       3       6      17       1       0     221     1.0
+     180     222     1.0       3       6      17       1       0     222     1.0
+     181     223     1.0       3       6      17       1       0     223     1.0
+     182     224     1.0       3       6      17       1       0     224     1.0
+     183     225     1.0       3       6      17       1       0     225     1.0
+     184     226     1.0       3       6      17       1       0     226     1.0
+     185     227     1.0       3       6      15       1       0     227     1.0
+     186     228     1.0       3       6      15       1       0     228     1.0
+     187     229     1.0       3       6      15       1       0     229     1.0
+     188     230     1.0       3       6      16       1       0     230     1.0
+     189     231     1.0       3       6      16       1       0     231     1.0
+     190     232     1.0       3       6      16       1       0     232     1.0
+     191     233     1.0       3       6      16       1       0     233     1.0
+     192     234     1.0       3       6      16       1       0     234     1.0
+     193     235     1.0       3       6      16       1       0     235     1.0
+     194     236     1.0       3       6      16       1       0     236     1.0
+     195     237     1.0       3       6      18       1       0     237     1.0
+     196     238     1.0       3       6      18       1       0     238     1.0
+     197     239     1.0       3       6      18       1       0     239     1.0
+     198     240     1.0       3       6      18       1       0     240     1.0
+     199     241     1.0       3       6      18       1       0     241     1.0
+     200     242     1.0       3       6       1       1       0     242     1.0
+     201     243     1.0       3       6       1       1       0     243     1.0
+     202     244     1.0       3       6       7       1       0     244     1.0
+     203     245     1.0       4       6      21       2       0     245     1.0
+     204     246     1.0       4       6      21       2       0     246     1.0
+     205     247     1.0       4       6      21       2       0     247     1.0
+     206     248     1.0       4       6      21       2       0     248     1.0
+     207     249     1.0       4       6      21       2       0     249     1.0
+     208     250     1.0       4       6      21       2       0     250     1.0
+     209     251     1.0       4       6      21       2       0     251     1.0
+     210     252     1.0       4       6      21       2       0     252     1.0
+     211     253     1.0       4       6      21       2       0     253     1.0
+     212     254     1.0       4       6      21       2       0     254     1.0
+     213     255     1.0       4       6      21       2       0     255     1.0
+     214     256     1.0       4       6      21       2       0     256     1.0
+     215     257     1.0       4       6      21       2       0     257     1.0
+     216     258     1.0       4       6      21       2       0     258     1.0
+     217     259     1.0       4       6      21       2       0     259     1.0
+     218     260     1.0       4       6      21       2       0     260     1.0
+     219     261     1.0       4       6      21       2       0     261     1.0
+     220     262     1.0       4       6      21       2       0     262     1.0
+     221     263     1.0       4       6      21       2       0     263     1.0
+     222     264     1.0       4       6      21       2       0     264     1.0
+     223     265     1.0       4       6      21       2       0     265     1.0
+     224     266     1.0       4       6      21       2       0     266     1.0
+     225     267     1.0       4       6      21       2       0     267     1.0
+     226     268     1.0       4       6      21       2       0     268     1.0
+     227     269     1.0       4       6      21       2       0     269     1.0
+     228     270     1.0       4       6      21       2       0     270     1.0
+     229     271     1.0       4       6      21       2       0     271     1.0
+     230     272     1.0       4       6      21       2       0     272     1.0
+     231     273     1.0       4       6      21       2       0     273     1.0
+     232     274     1.0       4       6      21       2       0     274     1.0
+     233     275     1.0       4       6      21       2       0     275     1.0
+     234     276     1.0       4       6      21       2       0     276     1.0
+     235     277     1.0       4       6      21       2       0     277     1.0
+     236     278     1.0       4       6      21       2       0     278     1.0
+     237     279     1.0       4       6      21       2       0     279     1.0
+     238     280     1.0       4       6      21       2       0     280     1.0
+     239     281     1.0       4       6      21       2       0     281     1.0
+     240     282     1.0       4       6      21       2       0     282     1.0
+     241     283     1.0       4       6      21       2       0     283     1.0
+     242     284     1.0       4       6      21       2       0     284     1.0
+     243     285     1.0       4       6      21       2       0     285     1.0
+     244     286     1.0       4       6      21       2       0     286     1.0
+     245     287     1.0       4       6      21       2       0     287     1.0
+     246     288     1.0       4       6      21       2       0     288     1.0
+     247     289     1.0       4       6      21       2       0     289     1.0
+     248     290     1.0       4       6      21       2       0     290     1.0
+     249     291     1.0       4       6      21       2       0     291     1.0
+     250     292     1.0       4       6      21       2       0     292     1.0
+     251     293     1.0       4       6      21       2       0     293     1.0
+     252     294     1.0       4       6      21       2       0     294     1.0
+     253     295     1.0       4       6      21       2       0     295     1.0
+     254     296     1.0       4       6      21       2       0     296     1.0
+     255     297     1.0       4       6      21       2       0     297     1.0
+     256     298     1.0       4       6      21       2       0     298     1.0
+     257     299     1.0       4       6      21       2       0     299     1.0
+     258     300     1.0       4       6      21       2       0     300     1.0
+     259     301     1.0       4       6      21       2       0     301     1.0
+     260     302     1.0       4       6      21       2       0     302     1.0
+     261     303     1.0       4       6      21       2       0     303     1.0
+     262     304     1.0       4       6      21       2       0     304     1.0
+     263     305     1.0       4       6      21       2       0     305     1.0
+     264     306     1.0       4       6      21       2       0     306     1.0
+     265     307     1.0       4       6      21       2       0     307     1.0
+     266     308     1.0       4       6      21       2       0     308     1.0
+     267     309     1.0       4       6      21       2       0     309     1.0
+     268     310     1.0       4       6      21       2       0     310     1.0
+     269     311     1.0       4       6      21       2       0     311     1.0
+     270     312     1.0       4       6      21       2       0     312     1.0
+     271     313     1.0       4       6      21       2       0     313     1.0
+     272     314     1.0       4       6      21       2       0     314     1.0
+     273     315     1.0       4       6      21       2       0     315     1.0
+     274     316     1.0       4       6      21       2       0     316     1.0
+     275     317     1.0       4       6      21       2       0     317     1.0
+     276     318     1.0       4       6      21       2       0     318     1.0
+     277     319     1.0       4       6      21       2       0     319     1.0
+     278     320     1.0       4       6      21       2       0     320     1.0
+     279     321     1.0       4       6      21       2       0     321     1.0
+     280     322     1.0       4       6      21       2       0     322     1.0
+     281     323     1.0       4       6      21       2       0     323     1.0
+     282     324     1.0       4       6      21       2       0     324     1.0
+     283     325     1.0       4       6      21       2       0     325     1.0
+     284     326     1.0       4       6      21       2       0     326     1.0
+     285     327     1.0       4       6      21       2       0     327     1.0
+     286     328     1.0       4       6      21       2       0     328     1.0
+     287     329     1.0       4       6      21       2       0     329     1.0
+     288     330     1.0       4       6       4       2       0     330     1.0
+     289     331     1.0       4       6       4       2       0     331     1.0
+     290     332     1.0       4       6       4       2       0     332     1.0
+     291     333     1.0       4       6       4       2       0     333     1.0
+     292     334     1.0       4       6       4       2       0     334     1.0
+     293     335     1.0       4       6       4       2       0     335     1.0
+     294     336     1.0       4       6       4       2       0     336     1.0
+     295     337     1.0       4       6       4       2       0     337     1.0
+     296     338     1.0       4       6       4       2       0     338     1.0
+     297     339     1.0       4       6       4       2       0     339     1.0
+     298     340     1.0       4       6       4       2       0     340     1.0
+     299     341     1.0       4       6       4       2       0     341     1.0
+     300     342     1.0       4       6       4       2       0     342     1.0
+     301     343     1.0       4       6       4       2       0     343     1.0
+     302     344     1.0       4       6       4       2       0     344     1.0
+     303     345     1.0       4       6       4       2       0     345     1.0
+     304     346     1.0       4       6       4       2       0     346     1.0
+     305     347     1.0       4       6       4       2       0     347     1.0
+     306     348     1.0       4       6       4       2       0     348     1.0
+     307     349     1.0       4       6       4       2       0     349     1.0
+     308     350     1.0       4       6       4       2       0     350     1.0
+     309     351     1.0       4       6       4       2       0     351     1.0
+     310     352     1.0       4       6       4       2       0     352     1.0
+     311     353     1.0       4       6       4       2       0     353     1.0
+     312     354     1.0       4       6       4       2       0     354     1.0
+     313     355     1.0       4       6       4       2       0     355     1.0
+     314     356     1.0       4       6       4       2       0     356     1.0
+     315     357     1.0       3       6      27       1       0     357     1.0
+     316     358     1.0       3       6      27       1       0     358     1.0
+     317     359     1.0       3       6      27       1       0     359     1.0
+     318     360     1.0       3       6      27       1       0     360     1.0
+     319     361     1.0       3       6      27       1       0     361     1.0
+     320     362     1.0       3       6      27       1       0     362     1.0
+     321     363     1.0       3       6      27       1       0     363     1.0
+     322     364     1.0       3       6      27       1       0     364     1.0
+     323     365     1.0       3       6      27       1       0     365     1.0
+     324     366     1.0       3       6      27       1       0     366     1.0
+     325     367     1.0       3       6      27       1       0     367     1.0
+     326     368     1.0       3       6      27       1       0     368     1.0
+     327     369     1.0       3       6      27       1       0     369     1.0
+     328     370     1.0       3       6      27       1       0     370     1.0
+     329     371     1.0       3       6      27       1       0     371     1.0
+     330     372     1.0       3       6      27       1       0     372     1.0
+     331     373     1.0       3       6      27       1       0     373     1.0
+     332     374     1.0       3       6      27       1       0     374     1.0
+     333     375     1.0       3       6      27       1       0     375     1.0
+     334     376     1.0       3       6      27       1       0     376     1.0
+     335     377     1.0       3       6      27       1       0     377     1.0
+     336     378     1.0       3       6      27       1       0     378     1.0
+     337     379     1.0       3       6      27       1       0     379     1.0
+     338     380     1.0       3       6      27       1       0     380     1.0
+     339     381     1.0       3       6      27       1       0     381     1.0
+     340     382     1.0       3       6      27       1       0     382     1.0
+     341     383     1.0       3       6      27       1       0     383     1.0
+     342     384     1.0       3       6      27       1       0     384     1.0
+     343     385     1.0       3       6      27       1       0     385     1.0
+     344     386     1.0       3       6      27       1       0     386     1.0
+     345     387     1.0       3       6      27       1       0     387     1.0
+     346     388     1.0       3       6      27       1       0     388     1.0
+     347     389     1.0       3       6      27       1       0     389     1.0
+     348     390     1.0       3       6      27       1       0     390     1.0
+     349     391     1.0       3       6      27       1       0     391     1.0
+     350     392     1.0       3       6      27       1       0     392     1.0
+     351     393     1.0       3       6      27       1       0     393     1.0
+     352     394     1.0       3       6      27       1       0     394     1.0
+     353     395     1.0       3       6      27       1       0     395     1.0
+     354     396     1.0       3       6      27       1       0     396     1.0
+     355     397     1.0       3       6      27       1       0     397     1.0
+     356     398     1.0       3       6      27       1       0     398     1.0
+     357     399     1.0       3       6      27       1       0     399     1.0
+     358     400     1.0       3       6      27       1       0     400     1.0
+     359     401     1.0       3       6      27       1       0     401     1.0
+     360     402     1.0       3       6      27       1       0     402     1.0
+     361     403     1.0       3       6      27       1       0     403     1.0
+     362     404     1.0       3       6      27       1       0     404     1.0
+     363     405     1.0       3       6      27       1       0     405     1.0
+     364     406     1.0       3       6      27       1       0     406     1.0
+     365     407     1.0       3       6      27       1       0     407     1.0
+     366     408     1.0       3       6      27       1       0     408     1.0
+     367     409     1.0       3       6      27       1       0     409     1.0
+     368     410     1.0       3       6      27       1       0     410     1.0
+     369     411     1.0       3       6      27       1       0     411     1.0
+     370     412     1.0       3       6      27       1       0     412     1.0
+     371     413     1.0       3       6      27       1       0     413     1.0
+     372     414     1.0       3       6      27       1       0     414     1.0
+     373     415     1.0       3       6      27       1       0     415     1.0
+     374     416     1.0       3       6      27       1       0     416     1.0
+     375     417     1.0       3       6      27       1       0     417     1.0
+     376     418     1.0       3       6      27       1       0     418     1.0
+     377     419     1.0       3       6      27       1       0     419     1.0
+     378     420     1.0       3       6      27       1       0     420     1.0
+     379     421     1.0       3       6      27       1       0     421     1.0
+     380     422     1.0       3       6      27       1       0     422     1.0
+     381     423     1.0       3       6      27       1       0     423     1.0
+     382     424     1.0       3       6      27       1       0     424     1.0
+     383     425     1.0       3       6      27       1       0     425     1.0
+     384     426     1.0       3       6      27       1       0     426     1.0
+     385     427     1.0       3       6      28       1       0     427     1.0
+     386     428     1.0       3       6      28       1       0     428     1.0
+     387     429     1.0       3       6      28       1       0     429     1.0
+     388     430     1.0       3       6      28       1       0     430     1.0
+     389     431     1.0       3       6      28       1       0     431     1.0
+     390     432     1.0       3       6      28       1       0     432     1.0
+     391     433     1.0       3       6      28       1       0     433     1.0
+     392     434     1.0       3       6      28       1       0     434     1.0
+     393     435     1.0       3       6      27       1       0     435     1.0
+     394     436     1.0       3       6      27       1       0     436     1.0
+     395     437     1.0       3       6      27       1       0     437     1.0
+     396     438     1.0       3       6      27       1       0     438     1.0
+     397     439     1.0       3       6      27       1       0     439     1.0
+     398     440     1.0       3       6      27       1       0     440     1.0
+     399     441     1.0       3       6      27       1       0     441     1.0
+     400     442     1.0       3       6      33       1       0     442     1.0
+     401     443     1.0       3       6      33       1       0     443     1.0
+     402     444     1.0       3       6      33       1       0     444     1.0
+     403     445     1.0       3       6      33       1       0     445     1.0
+     404     446     1.0       3       6      33       1       0     446     1.0
+     405     447     1.0       3       6      33       1       0     447     1.0
+     406     448     1.0       3       6      33       1       0     448     1.0
+     407     449     1.0       3       6      33       1       0     449     1.0
+     408     450     1.0       3       6      33       1       0     450     1.0
+     409     451     1.0       3       6      27       1       0     451     1.0
+     410     452     1.0       3       6      27       1       0     452     1.0
+     411     453     1.0       3       6      27       1       0     453     1.0
+     412     454     1.0       3       6      27       1       0     454     1.0
+     413     455     1.0       3       6      27       1       0     455     1.0
+     414     456     1.0       3       6      27       1       0     456     1.0
+     415     457     1.0       3       6      27       1       0     457     1.0
+     416     458     1.0       3       6      27       1       0     458     1.0
+     417     459     1.0       3       6      27       1       0     459     1.0
+     418     460     1.0       3       6      27       1       0     460     1.0
+     419     461     1.0       3       6      27       1       0     461     1.0
+     420     462     1.0       3       6      28       1       0     462     1.0
+     421     463     1.0       3       6      27       1       0     463     1.0
+     422     464     1.0       3       6      27       1       0     464     1.0
+     423     465     1.0       3       6      27       1       0     465     1.0
+     424     466     1.0       3       6      27       1       0     466     1.0
+     425     467     1.0       3       6      27       1       0     467     1.0
+     426     468     1.0       3       6      28       1       0     468     1.0
+     427     469     1.0       3       6      29       1       0     469     1.0
+     428     470     1.0       3       6      29       1       0     470     1.0
+     429     471     1.0       3       6      29       1       0     471     1.0
+     430     472     1.0       3       6      29       1       0     472     1.0
+     431     473     1.0       3       6      29       1       0     473     1.0
+     432     474     1.0       3       6      29       1       0     474     1.0
+     433     475     1.0       3       6      29       1       0     475     1.0
+     434     476     1.0       3       6      29       1       0     476     1.0
+     435     477     1.0       3       6      29       1       0     477     1.0
+     436     478     1.0       3       6      29       1       0     478     1.0
+     437     479     1.0       3       6      29       1       0     479     1.0
+     438     480     1.0       3       6      29       1       0     480     1.0
+     439     481     1.0       3       6      29       1       0     481     1.0
+     440     482     1.0       3       6      29       1       0     482     1.0
+     441     483     1.0       3       6      29       1       0     483     1.0
+     442     484     1.0       3       6      29       1       0     484     1.0
+     443     485     1.0       3       6      29       1       0     485     1.0
+     444     486     1.0       3       6      29       1       0     486     1.0
+     445     487     1.0       3       6      29       1       0     487     1.0
+     446     488     1.0       3       6      29       1       0     488     1.0
+     447     489     1.0       3       6      29       1       0     489     1.0
+     448     490     1.0       3       6      29       1       0     490     1.0
+     449     491     1.0       3       6      29       1       0     491     1.0
+     450     492     1.0       3       6      29       1       0     492     1.0
+     451     493     1.0       3       6      29       1       0     493     1.0
+     452     494     1.0       3       6      29       1       0     494     1.0
+     453     495     1.0       3       6      30       1       0     495     1.0
+     454     496     1.0       3       6      30       1       0     496     1.0
+     455     497     1.0       3       6      30       1       0     497     1.0
+     456     498     1.0       3       6      30       1       0     498     1.0
+     457     499     1.0       3       6      30       1       0     499     1.0
+     458     500     1.0       3       6      31       1       0     500     1.0
+     459     501     1.0       3       6      31       1       0     501     1.0
+     460     502     1.0       3       6      31       1       0     502     1.0
+     461     503     1.0       3       6      31       1       0     503     1.0
+     462     504     1.0       3       6      31       1       0     504     1.0
+     463     505     1.0       3       6      31       1       0     505     1.0
+     464     506     1.0       3       6      31       1       0     506     1.0
+     465     507     1.0       3       6      31       1       0     507     1.0
+     466     508     1.0       3       6      31       1       0     508     1.0
+     467     509     1.0       3       6      31       1       0     509     1.0
+     468     510     1.0       3       6      31       1       0     510     1.0
+     469     511     1.0       3       6      31       1       0     511     1.0
+     470     512     1.0       3       6      33       1       0     512     1.0
+     471     513     1.0       3       6      33       1       0     513     1.0
+     472     514     1.0       3       6      33       1       0     514     1.0
+     473     515     1.0       3       6      28       1       0     515     1.0
+     474     516     1.0       3       6      28       1       0     516     1.0
+     475     517     1.0       3       6      28       1       0     517     1.0
+     476     518     1.0       3       6      28       1       0     518     1.0
+     477     519     1.0       3       6      28       1       0     519     1.0
+     478     520     1.0       3       6      32       1       0     520     1.0
+     479     521     1.0       3       6      32       1       0     521     1.0
+     480     522     1.0       3       6      32       1       0     522     1.0
+     481     523     1.0       3       6      32       1       0     523     1.0
+     482     524     1.0       3       6      32       1       0     524     1.0
+     483     525     1.0       3       6      32       1       0     525     1.0
+     484     526     1.0       3       6      32       1       0     526     1.0
+     485     527     1.0       3       6      32       1       0     527     1.0
+     486     528     1.0       3       6      32       1       0     528     1.0
+     487     529     1.0       3       6      32       1       0     529     1.0
+     488     530     1.0       3       6      32       1       0     530     1.0
+     489     531     1.0       3       6      32       1       0     531     1.0
+     490     532     1.0       3       6      32       1       0     532     1.0
+     491     533     1.0       3       6      32       1       0     533     1.0
+     492     534     1.0       3       6      32       1       0     534     1.0
+     493     535     1.0       3       6      32       1       0     535     1.0
+     494     536     1.0       3       6      32       1       0     536     1.0
+     495     537     1.0       3       6      32       1       0     537     1.0
+     496     538     1.0       3       6      33       1       0     538     1.0
+     497     539     1.0       3       6      33       1       0     539     1.0
+     498     540     1.0       3       6      33       1       0     540     1.0
+     499     541     1.0       3       6      33       1       0     541     1.0
+     500     542     1.0       3       6      33       1       0     542     1.0
+     501     543     1.0       3       6      33       1       0     543     1.0
+     502     544     1.0       3       6      33       1       0     544     1.0
+     503     545     1.0       3       6      33       1       0     545     1.0
+     504     546     1.0       3       6      33       1       0     546     1.0
+     505     547     1.0       3       6      33       1       0     547     1.0
+     506     548     1.0       3       6      32       1       0     548     1.0
+     507     549     1.0       3       6      32       1       0     549     1.0
+     508     550     1.0       3       6      32       1       0     550     1.0
+     509     551     1.0       3       6      32       1       0     551     1.0
+     510     552     1.0       3       6      32       1       0     552     1.0
+     511     553     1.0       3       6      32       1       0     553     1.0
+     512     554     1.0       3       6      32       1       0     554     1.0
+     513     555     1.0       3       6      30       1       0     555     1.0
+     514     556     1.0       3       6      30       1       0     556     1.0
+     515     557     1.0       3       6      30       1       0     557     1.0
+     516     558     1.0       3       6      30       1       0     558     1.0
+     517     559     1.0       3       6      30       1       0     559     1.0
+     518     560     1.0       3       6      31       1       0     560     1.0
+     519     561     1.0       3       6      31       1       0     561     1.0
+     520     562     1.0       3       6      31       1       0     562     1.0
+     521     563     1.0       3       6      31       1       0     563     1.0
+     522     564     1.0       3       6      31       1       0     564     1.0
+     523     565     1.0       3       6      31       1       0     565     1.0
+     524     566     1.0       3       6      31       1       0     566     1.0
+     525     567     1.0       3       6      31       1       0     567     1.0
+     526     568     1.0       3       6      31       1       0     568     1.0
+     527     569     1.0       3       6      31       1       0     569     1.0
+     528     570     1.0       3       6      31       1       0     570     1.0
+     529     571     1.0       3       6      32       1       0     571     1.0
+     530     572     1.0       3       6      32       1       0     572     1.0
+     531     573     1.0       3       6      32       1       0     573     1.0
+     532     574     1.0       3       6      32       1       0     574     1.0
+     533     575     1.0       3       6      32       1       0     575     1.0
+     534     576     1.0       3       6      32       1       0     576     1.0
+     535     577     1.0       3       6      32       1       0     577     1.0
+     536     578     1.0       3       6      32       1       0     578     1.0
+     537     579     1.0       3       6      32       1       0     579     1.0
+     538     580     1.0       3       6      32       1       0     580     1.0
+     539     581     1.0       3       6      32       1       0     581     1.0
+     540     582     1.0       3       6      32       1       0     582     1.0
+     541     583     1.0       3       6      32       1       0     583     1.0
+     542     584     1.0       3       6      32       1       0     584     1.0
+     543     585     1.0       3       6      32       1       0     585     1.0
+     544     586     1.0       3       6      32       1       0     586     1.0
+     545     587     1.0       3       6      29       1       0     587     1.0
+     546     588     1.0       3       6      27       1       0     588     1.0
+     547     589     1.0       3       6      27       1       0     589     1.0
+     548     590     1.0       3       6      27       1       0     590     1.0
+     549     591     1.0       3       6      32       1       0     591     1.0
+     550     592     1.0       3       6      32       1       0     592     1.0
+     551     593     1.0       3       6      32       1       0     593     1.0
+     552     594     1.0       3       6      32       1       0     594     1.0
+     553     595     1.0       3       6      27       1       0     595     1.0
+     554     596     1.0       3       6      31       1       0     596     1.0
+     555     597     1.0       3       6      29       1       0     597     1.0
+     556     598     1.0       3       6      28       1       0     598     1.0
+     557     599     1.0       3       6      29       1       0     599     1.0
+     558     600     1.0       3       6      29       1       0     600     1.0
+     559     601     1.0       3       6      27       1       0     601     1.0
+     560     602     1.0       3       6      28       1       0     602     1.0
+     561     603     1.0       3       6      29       1       0     603     1.0
+     562     604     1.0       3       6       6       1       0     604     1.0
+     563     605     1.0       3       6      28       1       0     605     1.0
+     564     606     1.0       3       6      28       1       0     606     1.0
+     565     607     1.0       3       6       6       1       0     607     1.0
+     566     608     1.0       3       6      32       1       0     608     1.0
+     567     609     1.0       3       6      32       1       0     609     1.0
+     568     610     1.0       3       6      27       1       0     610     1.0
+     569     611     1.0       3       6       6       1       0     611     1.0
+     570     612     1.0       3       6       6       1       0     612     1.0
+     571     613     1.0       3       6      29       1       0     613     1.0
+     572     614     1.0       3       6      29       1       0     614     1.0
+     573     615     1.0       3       6      29       1       0     615     1.0
+     574     616     1.0       3       6      29       1       0     616     1.0
+     575     617     1.0       3       6      29       1       0     617     1.0
+     576     618     1.0       3       6      29       1       0     618     1.0
+     577     619     1.0       3       6      29       1       0     619     1.0
+     578     620     1.0       3       6      29       1       0     620     1.0
+     579     621     1.0       3       6      29       1       0     621     1.0
+     580     622     1.0       3       6      29       1       0     622     1.0
+     581     623     1.0       3       6      29       1       0     623     1.0
+     582     624     1.0       3       6      33       1       0     624     1.0
+     583     625     1.0       3       6      33       1       0     625     1.0
+     584     626     1.0       3       6      33       1       0     626     1.0
+     585     627     1.0       3       6      33       1       0     627     1.0
+     586     628     1.0       3       6      33       1       0     628     1.0
+     587     629     1.0       3       6      33       1       0     629     1.0
+     588     630     1.0       3       6      33       1       0     630     1.0
+     589     631     1.0       3       6      33       1       0     631     1.0
+     590     632     1.0       3       6      29       1       0     632     1.0
+     591     633     1.0       3       6      32       1       0     633     1.0
+     592     634     1.0       3       6      32       1       0     634     1.0
+     593     635     1.0       3       6      32       1       0     635     1.0
+     594     636     1.0       3       6      32       1       0     636     1.0
+     595     637     1.0       3       6      32       1       0     637     1.0
+     596     638     1.0       3       6      32       1       0     638     1.0
+     597     639     1.0       3       6      32       1       0     639     1.0
+     598     640     1.0       3       6      32       1       0     640     1.0
+     599     641     1.0       3       6      33       1       0     641     1.0
+     600     642     1.0       3       6      33       1       0     642     1.0
+     601     643     1.0       3       6      33       1       0     643     1.0
+     602     644     1.0       3       6      33       1       0     644     1.0
+     603     645     1.0       3       6      27       1       0     645     1.0
+     604     646     1.0       3       6      28       1       0     646     1.0
+     605     647     1.0       3       6      27       1       0     647     1.0
+     606     648     1.0       3       6      29       1       0     648     1.0
+     607     649     1.0       3       6      27       1       0     649     1.0
+     608     650     1.0       3       6      27       1       0     650     1.0
+     609     651     1.0       3       6       6       1       0     651     1.0
+     610     652     1.0       3       6      29       1       0     652     1.0
+C--------------------------------------------------------------------------------------------------
+C
+C                Element Groups for Well Pumping Deliveries
+C
+C   List the elements in each group where selected well pumping above is delivered to. 
+C
+C   NGRP  ; Number of element groups 
+C            * Enter 0 if there are no element groups where well pumping is delivered
+C   ID    ; Element group ID 
+C   NELEM ; Number of elements in element group ID
+C   IELEM ; Element numbers that are in group ID
+C
+C-------------------------------------------------------------------------------
+      33                 / NGRP
+C-------------------------------------------------------------------------------
+C  ID       NELEM   IELEM
+C-------------------------------------------------------------------------------
+    1        9         7
+                       8
+                      13
+                      14
+                      19
+                      20
+                      26
+                      27
+                      34
+    2        8       178
+                     193
+                     194
+                     211
+                     214
+                     215
+                     229
+                     230
+    3        1       238
+    4       13       375
+                     378
+                     379
+                     388
+                     392
+                     416
+                     417
+                     418
+                     430
+                     431
+                     432
+                     449
+                     450
+    5        5       350
+                     357
+                     358
+                     406
+                     407
+    6        3       231
+                     232
+                     252
+    7        1       238
+    8        1       317
+    9       31       128
+                     144
+                     156
+                     157
+                     158
+                     170
+                     171
+                     184
+                     185
+                     186
+                     198
+                     199
+                     200
+                     203
+                     204
+                     217
+                     218
+                     219
+                     220
+                     221
+                     222
+                     223
+                     233
+                     234
+                     235
+                     242
+                     243
+                     254
+                     255
+                     256
+                     263
+    10       9       353
+                     359
+                     360
+                     361
+                     362
+                     375
+                     376
+                     377
+                     408
+    11       2       291
+                     302
+    12       2       291
+                     302
+    13       4       341
+                     342
+                     343
+                     353
+    14       2       306
+                     318
+    15       4       172
+                     187
+                     201
+                     206
+    16       7       172
+                     186
+                     187
+                     200
+                     201
+                     205
+                     206
+    17       6       207
+                     208
+                     225
+                     226
+                     239
+                     247
+    18       7       276
+                     277
+                     289
+                     290
+                     301
+                     312
+                     313
+    19       7       443
+                     444
+                     445
+                     465
+                     466
+                     467
+                     485
+    20       3       314
+                     326
+                     327
+    21       8       381
+                     382
+                     384
+                     388
+                     389
+                     392
+                     393
+                     394
+    22      11       332
+                     333
+                     334
+                     343
+                     344
+                     345
+                     363
+                     364
+                     365
+                     366
+                     369
+    23       7       230
+                     249
+                     268
+                     271
+                     280
+                     293
+                     304
+    24       1       238
+    25       2       351
+                     352
+    26       2       270
+                     279
+    27       4       283
+                     295
+                     296
+                     307
+    28       3       196
+                     232
+                     252
+    29       1       319
+    30       2       251
+                     252
+    31       2       196
+                     216
+    32       4       306
+                     307
+                     318
+                     319
+    33       4       307
+                     319
+                     320
+                     321
+    

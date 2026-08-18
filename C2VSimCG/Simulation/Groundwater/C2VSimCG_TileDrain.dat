@@ -1,0 +1,252 @@
+#4.0
+C *** DO NOT DELETE ABOVE LINE ***
+C
+C*******************************************************************************
+C
+C                  INTEGRATED WATER FLOW MODEL (IWFM)
+C
+C*******************************************************************************
+C
+C              TILE DRAIN AND SUB_IRRIGATION PARAMETER DATA FILE
+C                         Tile Drain Component
+C
+C             Project:  C2VSim Coarse Grid (C2VSimCG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSimCG_TileDrain.dat
+C             Version:  C2VSimCG v2025
+C
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model - Coarse Grid (C2VSimCG)
+C  Copyright (C) 2003-2025
+C  State of California, Department of Water Resources 
+C
+C  This model is free: you can redistribute it and/or modify it 
+C  under the terms of the GNU General Public License as published 
+C  by the Free Software Foundation, either version 3 of the License, 
+C  or (at your option) any later version.
+C
+C  This model is distributed in the hope that it will be useful, but  
+C  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+C  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public 
+C  License for more details.
+C
+C  You should have received a copy of the GNU General Public License 
+C  along with this model. If not, see (https://www.gnu.org/licenses/).
+C
+C  For technical support, e-mail: IWFMtechsupport@water.ca.gov 
+C
+C*******************************************************************************
+C                          File Description:
+C
+C   This data file contains tile drain and subsurface irrigation parameter values.
+C
+C*******************************************************************************
+C                  Tile Drain Data Specifications
+C
+C   NTD    ; Number of groundwater nodes with tile drains
+C   FACTH  ; Conversion factor for tile drain elevations
+C   FACTCDC; Conversion factor for tile drain conductances
+C            It is used to convert only the spatial component of the unit; 
+C             DO NOT include the conversion factor for time component of the unit.
+C             * e.g. Unit of conductance listed in this file = AC/MONTH
+C                    Consistent unit used in simulation      = SQ.FT/DAY 
+C                    Enter FACTQ (AC/MONTH -> SQ.FT/MONTH)   = 43560.0 
+C                     (conversion of MONTH -> DAY is performed automatically) 
+C   TUNITDR; Time unit of conductance.  This should be one of the units 
+C            recognized by HEC-DSS that are listed in the Main Control File.  
+C-------------------------------------------------------------------------------
+C       VALUE                   DESCRIPTION
+C-------------------------------------------------------------------------------
+        50                       /NTD
+        1.0                      /FACTH
+        60.0                     /FACTCDC  (sq.ft./sec --> sq.ft./min)
+        1MIN                     /TUNITDR
+C-------------------------------------------------------------------------------
+C                     Tile Drain Parameters
+C
+C   The following lists the groundwater node number, elevation and conductance 
+C   for each tile drain. The destination type and destination ID that the tile  
+C   drain flows into is also listed.
+C
+C   IDDR   ; Tile drain ID
+C   NODEDR ; Groundwater node number corresponding to the tile drain
+C   ELEVDR ; Elevation of the drain; [L]
+C   CDCDR  ; Hydraulic conductance of the interface between the aquifer and 
+C             the drain; [L^2/T]
+C   TYPDST ; Destination type for drain flow
+C              0 = Drain flow goes outside the model domain
+C              1 = Drain flow goes to stream node DST (see below)
+C   DST   ;  Destination number for drain flow
+C              * Note: Enter any number if TYPDST is 0
+C
+C-------------------------------------------------------------------------------
+C   IDDR    NODEDR   ELEVDR        CDCDR   TYPDST  DST
+C-------------------------------------------------------------------------------
+     1      794      112.14        0.045   1       217
+     2      815      183.32        0.045   1       217
+     3      816      117.09        0.045   1       217
+     4      827      135.82        0.045   1       217
+     5      828      132.75        0.045   1       217
+     6      840      189.73        0.045   1       217
+     7      841      168.17        0.045   1       217
+     8      842      151.09        0.045   1       217
+     9      843      137.09        0.045   1       217
+    10      854      337.11        0.045   1       217
+    11      855      219.17        0.045   1       217
+    12      856      192.45        0.045   1       217
+    13      857      189.25        0.045   1       217
+    14      863      263.76        0.045   1       217
+    15      867      248.03        0.045   1       217
+    16      871      178.76        0.045   1       217
+    17      462       -4.50     1000.000   1       517
+    18      473       -9.90       10.000   1       544
+    19      474       -9.70     1000.000   1       544
+    20      475       -6.92      100.000   1       518
+    21      476       -9.70     1000.000   1       519
+    22      492      -12.30      100.000   1       546
+    23      493      -12.00     1000.000   1       520
+    24      494       -9.10      100.000   1       301
+    25      495      -16.20     1000.000   1       303
+    26      496       -7.70     1000.000   1       301
+    27      519      -16.80      100.000   1       303
+    28      520      -19.00    10000.000   1       304
+    29      527      -15.30    10000.000   1       547
+    30      532      -17.10      100.000   1       531
+    31      533      -15.90      100.000   1       306
+    32      534      -16.70    10000.000   1       305
+    33      539      -14.10      100.000   1       660
+    34      540      -18.40     1000.000   1       303
+    35      541      -15.60       10.000   1       274
+    36      542      -17.00       50.000   1       661
+    37      543      -18.90     1000.000   1       274
+    38      552      -16.85     1000.000   1       273
+    39      553      -12.60     1000.000   1       273
+    40      556      -15.20      100.000   1       662
+    41      557      -10.90     1000.000   1       272
+    42      558      -10.80     1000.000   1       272
+    43      567       -6.10     1000.000   1       263
+    44      574      -11.60     1000.000   1       663
+    45      575       -6.70     1000.000   1       663
+    46      576       -3.00     1000.000   1       262
+    47      590       -8.80     1000.000   1       663
+    48      591       -5.90     1000.000   1       663
+    49      592       -1.70     1000.000   1       261
+    50      605        1.80     1000.000   1       260
+C*******************************************************************************
+C                  Subsurface Irrigation Data Specifications
+C
+C   NSI      ;  Number of groundwater nodes with subsurface irrigation
+C   FACTHSI  ;  Conversion factor for subsurface irrigation elevations
+C   FACTCDCSI;  Conversion factor for subsurface irrigation conductances
+C               It is used to convert only the spatial component of the unit; 
+C               DO NOT include the conversion factor for time component of the unit.
+C               * e.g. Unit of conductance listed in this file = AC/MONTH
+C                      Consistent unit used in simulation      = SQ.FT/DAY 
+C                      Enter FACTQ (AC/MONTH -> SQ.FT/MONTH)   = 43560.0 
+C                       (conversion of MONTH -> DAY is performed automatically) 
+C   TUNITSI  ; Time unit of conductance.  This should be one of the units 
+C               recognized by HEC-DSS that are listed in the Main Control File.  
+C
+C-------------------------------------------------------------------------------
+C       VALUE                   DESCRIPTION
+C-------------------------------------------------------------------------------
+         0                      / NSI
+         1.0                    / FACTHSI
+         1.0                    / FACTCDCSI
+         1MON                   / TUNITSI
+C-------------------------------------------------------------------------------
+C                     Subsurface Irrigation Parameters
+C
+C   The following lists the groundwater node number, elevation and conductance 
+C   for each subsurface irrigation. 
+C
+C   IDSI   ; Subsurface irrigation ID
+C   NODESI ; Groundwater node number corresponding to the subsurface irrigation
+C   ELEVSI ; Elevation of the subsurface irrigation; [L]
+C   CDCSI  ; Hydraulic conductance of the interface between the aquifer and 
+C             subsurface irrigation; [L^2/T]
+C
+C-------------------------------------------------------------------------------
+C   IDSI  NODESI    ELEVSI    CDCSI         
+C-------------------------------------------------------------------------------
+*
+*
+C*******************************************************************************
+C                      Hydrograph Print Control
+C
+C   The following lists the tile drain and subsurface irrigation IDs for which 
+C   a hydrograph printing is needed, as well as output control options.
+C
+C   NOUTTD  ;  Number of hydrographs to be printed
+C   FACTVLOU;  Factor to convert simulation unit of tile drain/subsurface irrigation
+C                flows into intented output unit 
+C   UNITVLOU;  Output unit of flows (max. 10 characters long)
+C   TDOUTFL ;  Filename for tile drain/subsurface irrigation hydrograph output
+C                (max. 1000 characters)
+C   ID      ;  Tile drain or subsurface irrigation ID for hydrograph printing
+C   IDTYP   ;  Type of hydrograph
+C                1 = Tile drain hydrograph
+C                2 = Subsurface irrigation hydrograph
+C   NAME    ;  Name of the hydrograph (max. 30 characters)
+C
+C-------------------------------------------------------------------------------
+C   VALUE                                       / DESCRIPTION
+C---------------------------------------------------------------------------
+     50                                         / NOUTTD
+     2.29568E-08                                / FACTVLOU   (cu.ft. -> tac.ft.)
+     tac.ft.                                    / UNITVLOU
+     ..\Results\C2VSimCG_TileDrains.out         / TDOUTFL
+C-------------------------------------------------------------------------------
+C      ID    IDTYP      NAME 
+C-------------------------------------------------------------------------------
+        1       1       Tiledrain_1
+        2       1       Tiledrain_2
+        3       1       Tiledrain_3
+        4       1       Tiledrain_4
+        5       1       Tiledrain_5
+        6       1       Tiledrain_6
+        7       1       Tiledrain_7
+        8       1       Tiledrain_8
+        9       1       Tiledrain_9
+        10      1       Tiledrain_10
+        11      1       Tiledrain_11
+        12      1       Tiledrain_12
+        13      1       Tiledrain_13
+        14      1       Tiledrain_14
+        15      1       Tiledrain_15
+        16      1       Tiledrain_16
+        17      1       Delta_Node_462
+        18      1       Delta_Node_473
+        19      1       Delta_Node_474
+        20      1       Delta_Node_475
+        21      1       Delta_Node_476
+        22      1       Delta_Node_492
+        23      1       Delta_Node_493
+        24      1       Delta_Node_494
+        25      1       Delta_Node_495
+        26      1       Delta_Node_496
+        27      1       Delta_Node_519
+        28      1       Delta_Node_520
+        29      1       Delta_Node_527
+        30      1       Delta_Node_532
+        31      1       Delta_Node_533
+        32      1       Delta_Node_534
+        33      1       Delta_Node_539
+        34      1       Delta_Node_540
+        35      1       Delta_Node_541
+        36      1       Delta_Node_542
+        37      1       Delta_Node_543
+        38      1       Delta_Node_552
+        39      1       Delta_Node_553
+        40      1       Delta_Node_556
+        41      1       Delta_Node_557
+        42      1       Delta_Node_558
+        43      1       Delta_Node_567
+        44      1       Delta_Node_574
+        45      1       Delta_Node_575
+        46      1       Delta_Node_576
+        47      1       Delta_Node_590
+        48      1       Delta_Node_591
+        49      1       Delta_Node_592
+        50      1       Delta_Node_605

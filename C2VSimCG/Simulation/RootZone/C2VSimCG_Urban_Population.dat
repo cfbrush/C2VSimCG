@@ -1,0 +1,89 @@
+C*******************************************************************************
+C
+C                  INTEGRATED WATER FLOW MODEL (IWFM)
+C
+C*******************************************************************************
+C       
+C                     POPULATION DATA FILE      
+C                      Root Zone Component
+C                      *** Version 4.13 ***
+C
+C
+C             Project:  C2VSim Coarse Grid (C2VSimCG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSimCG_Urban_Population.dat
+C             Version:  C2VSimCG v2025
+C
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model - Coarse Grid (C2VSimCG)
+C  Copyright (C) 2003-2025
+C  State of California, Department of Water Resources 
+C
+C  This model is free: you can redistribute it and/or modify it 
+C  under the terms of the GNU General Public License as published 
+C  by the Free Software Foundation, either version 3 of the License, 
+C  or (at your option) any later version.
+C
+C  This model is distributed in the hope that it will be useful, but  
+C  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+C  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public 
+C  License for more details.
+C
+C  You should have received a copy of the GNU General Public License 
+C  along with this model. If not, see (https://www.gnu.org/licenses/).
+C
+C  For technical support, e-mail: IWFMtechsupport@water.ca.gov 
+C
+C*******************************************************************************
+C                              File Description
+C
+C   This data file contains a set of population data on a time-series basis
+C    
+C*******************************************************************************
+C                      Population Data Specifications
+C
+C   NCOLPOP;  Number of population data columns
+C   NSPPOP ;  Number of time steps to update the population data
+C              * Enter any number if time-tracking option is on
+C   NFQPOP ;  Repetition frequency of the population data 
+C              * Enter 0 if full time series data is supplied
+C              * Enter any number if time-tracking option is on
+C   DSSFL  ;  The name of the DSS file for data input (maximum 50 characters); 
+C              * Leave blank if DSS file is not used for data input
+C
+C-------------------------------------------------------------------------------
+C         VALUE                                      DESCRIPTION
+C-------------------------------------------------------------------------------
+          105                                        / NCOLPOP
+          1                                          / NSPPOP
+          0                                          / NFQPOP
+                                                     / DSSFL
+C-------------------------------------------------------------------------------
+C                           Population Data
+C                         (READ FROM THIS FILE)
+C
+C   List the population data below, if it will not be read from a
+C   DSS file (i.e. DSSFL is left blank above).
+C
+C   ITPOP;   Time
+C   POPUL;   Population; [People]
+C
+C-------------------------------------------------------------------------------                                                                                                                                                                    
+C   ITPOP                    POPUL[1]: DAUCO 4148     POPUL[2]: DAUCO 4607     POPUL[3]: DAUCO 13752    POPUL[4]: DAUCO 13911    POPUL[5]: DAUCO 13952    POPUL[6]: DAUCO 14145    POPUL[7]: DAUCO 14152    POPUL[8]: DAUCO 14211    POPUL[9]: DAUCO 14252    POPUL[10]: DAUCO 14345   POPUL[11]: DAUCO 14352   POPUL[12]: DAUCO 14404   POPUL[13]: DAUCO 14452   POPUL[14]: DAUCO 14545   POPUL[15]: DAUCO 14552   POPUL[16]: DAUCO 14752   POPUL[17]: DAUCO 16257   POPUL[18]: DAUCO 16306   POPUL[19]: DAUCO 16311   POPUL[20]: DAUCO 16357   POPUL[21]: DAUCO 16406   POPUL[22]: DAUCO 16411   POPUL[23]: DAUCO 16457   POPUL[24]: DAUCO 16551   POPUL[25]: DAUCO 16604   POPUL[26]: DAUCO 16611   POPUL[27]: DAUCO 16651   POPUL[28]: DAUCO 16704   POPUL[29]: DAUCO 16706   POPUL[30]: DAUCO 16711   POPUL[31]: DAUCO 16804   POPUL[32]: DAUCO 16851   POPUL[33]: DAUCO 17004   POPUL[34]: DAUCO 17158   POPUL[35]: DAUCO 17231   POPUL[36]: DAUCO 17234   POPUL[37]: DAUCO 17251   POPUL[38]: DAUCO 17334   POPUL[39]: DAUCO 18034   POPUL[40]: DAUCO 18103   POPUL[41]: DAUCO 18105   POPUL[42]: DAUCO 18239   POPUL[43]: DAUCO 18450   POPUL[44]: DAUCO 18501   POPUL[45]: DAUCO 18507   POPUL[46]: DAUCO 18539   POPUL[47]: DAUCO 18634   POPUL[48]: DAUCO 18648   POPUL[49]: DAUCO 18657   POPUL[50]: DAUCO 19148   POPUL[51]: DAUCO 19157   POPUL[52]: DAUCO 19207   POPUL[53]: DAUCO 19239   POPUL[54]: DAUCO 20539   POPUL[55]: DAUCO 20639   POPUL[56]: DAUCO 20650   POPUL[57]: DAUCO 20750   POPUL[58]: DAUCO 20824   POPUL[59]: DAUCO 20850   POPUL[60]: DAUCO 20924   POPUL[61]: DAUCO 20950   POPUL[62]: DAUCO 21024   POPUL[63]: DAUCO 21124   POPUL[64]: DAUCO 21224   POPUL[65]: DAUCO 21320   POPUL[66]: DAUCO 21420   POPUL[67]: DAUCO 21520   POPUL[68]: DAUCO 21610   POPUL[69]: DAUCO 21624   POPUL[70]: DAUCO 21639   POPUL[71]: DAUCO 21650   POPUL[72]: DAUCO 23310   POPUL[73]: DAUCO 23410   POPUL[74]: DAUCO 23510   POPUL[75]: DAUCO 23610   POPUL[76]: DAUCO 23616   POPUL[77]: DAUCO 23654   POPUL[78]: DAUCO 23710   POPUL[79]: DAUCO 23716   POPUL[80]: DAUCO 23816   POPUL[81]: DAUCO 23910   POPUL[82]: DAUCO 23916   POPUL[83]: DAUCO 23954   POPUL[84]: DAUCO 24010   POPUL[85]: DAUCO 24054   POPUL[86]: DAUCO 24116   POPUL[87]: DAUCO 24154   POPUL[88]: DAUCO 24216   POPUL[89]: DAUCO 24254   POPUL[90]: DAUCO 24354   POPUL[91]: DAUCO 24410   POPUL[92]: DAUCO 24416   POPUL[93]: DAUCO 24510   POPUL[94]: DAUCO 24515   POPUL[95]: DAUCO 24516   POPUL[96]: DAUCO 24616   POPUL[97]: DAUCO 25415   POPUL[98]: DAUCO 25515   POPUL[99]: DAUCO 25615   POPUL[100]: DAUCO 25715  POPUL[101]: DAUCO 25754  POPUL[102]: DAUCO 25815  POPUL[103]: DAUCO 25915  POPUL[104]: DAUCO 26015  POPUL[105]: DAUCO 26115  
+    12/31/2500_24:00         1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        1                        
+C-------------------------------------------------------------------------------
+C                       Pathnames for Population Data
+C                           (READ FROM DSS FILE)
+C
+C   List the pathnames for the population data below, if it will be read 
+C   from a DSS file (i.e. DSSFL is specified above).
+C
+C   I    ;  Pathname number
+C   PATH ;  Pathname for the time series record 
+C
+C----------------------------------------------------------------------------------------------------------- 
+C   I       PATH
+C-----------------------------------------------------------------------------------------------------------
+*
+*

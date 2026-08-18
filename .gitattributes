@@ -1,0 +1,3 @@
+# Never convert line endings or treat files as text for EOL purposes: IWFM inputs must stay byte-exact.
+* -text
+# (No Git LFS needed: no C2VSimCG input exceeds GitHub's 100 MB limit; bin/ and Excel/ are ignored.)

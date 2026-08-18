@@ -1,0 +1,322 @@
+C*******************************************************************************
+C
+C                  INTEGRATED WATER FLOW MODEL (IWFM)
+C
+C*******************************************************************************
+C
+C                 STREAM BYPASS SPECIFICATION DATA FILE
+C                           Stream Component
+C                          *** Version 4.2 ***
+C
+C
+C             Project:  C2VSim Coarse Grid (C2VSimCG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSim_BypassSpec.dat
+C             Version:  C2VSimCG v2025 
+C
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model - Coarse Grid (C2VSimCG)
+C  Copyright (C) 2003-2025
+C  State of California, Department of Water Resources 
+C
+C  This model is free: you can redistribute it and/or modify it 
+C  under the terms of the GNU General Public License as published 
+C  by the Free Software Foundation, either version 3 of the License, 
+C  or (at your option) any later version.
+C
+C  This model is distributed in the hope that it will be useful, but  
+C  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+C  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public 
+C  License for more details.
+C
+C  You should have received a copy of the GNU General Public License 
+C  along with this model. If not, see (https://www.gnu.org/licenses/).
+C
+C  For technical support, e-mail: IWFMtechsupport@water.ca.gov 
+C
+C*******************************************************************************
+C                          File Description
+C
+C  This data file contains the specification data for stream bypasses.
+C
+C*******************************************************************************
+C
+C       Rating Flow
+C   ID  Table  Values Description
+C  ---- ------ ------ -----------
+C    1           x    M&T Flood Relief Structure spill to Butte Basin
+C    2           x    3Bs Flood Relief Structure spill to Butte Basin
+C    3           x    Goose Lake Flood Relief Structure to Butte Basin
+C    4           x    Moulton Weir spill to Butte Basin                                                 
+C    5           x    Colusa Weir spill to Butte Basin                                                  
+C    6           x    Tisdale Weir near Grimes                                                  
+C    7           x    Fremont Weir spill to Yolo Bypass                                                 
+C    8           x    Sacramento Weir spill to Yolo Bypass                                                      
+C    9           x    Knights Landing Ridge Cut flood flow to Yolo Bypass                                                       
+C   10     x          Reset of Cache Creek at Caypay Dam
+C   11           x    Kings River to S Fork Kings River                                                 
+C   12     x          San Joaquin River to Chowchilla Bypass                                                    
+C   13     x          Chowchilla River to Eastside Bypass                                                       
+C   14     x          Deadman's Creek to Eastside Bypass                                                        
+C   15     x          Bear Creek to Eastside Bypass                                                     
+C   16     x          End of Kaweah River to be spread in Kaweah River Fan as recharge                                                  
+C   17     x          End of Tule River to be spread in Tule River Fan as recharge                                                      
+C   18     x          Kern River Flood Channel
+C   19           x    Delta Cross Channel
+C   20           x    San Joaquin River to Old River near Stewart Tract
+C   21           x    San Joaquin River to Old River near Webb Tract
+C   22           x    Sacramento River to Old River near Webb Tract
+C----------------------------------------------------------------------------------
+C
+C                 Bypass Configuration Specifications
+C
+C   NBYPS   ; Number of bypasses
+C   FACTX   ; Conversion factor for DIVX
+C              It is used to convert only the spatial component of the unit; 
+C              DO NOT include the conversion factor for time component of the unit.
+C              * e.g. Unit of stream flow listed in this file   = AC-FT/MONTH
+C                     Consistent unit used in simulation        = CU.FT/DAY 
+C                     Enter FACTX (AC-FT/MONTH -> CU.FT/MONTH)  = 43560.0 
+C                      (conversion of MONTH -> DAY is performed automatically) 
+C   TUNITX  ; Time unit of stream flow.  This should be one of the units 
+C              recognized by HEC-DSS that are listed in the Main Control File.  
+C   FACTY   ; Conversion factor for DIVY
+C              It is used to convert only the spatial component of the unit; 
+C              DO NOT include the conversion factor for time component of the unit.
+C              * e.g. Unit of spills listed in this file        = AC-FT/MONTH
+C                     Consistent unit used in simulation        = CU.FT/DAY 
+C                     Enter FACTY (AC-FT/MONTH -> CU.FT/MONTH)  = 43560.0 
+C                      (conversion of MONTH -> DAY is performed automatically) 
+C   TUNITY  ; Time unit of spills into the bypasses.  This should be one of the  
+C              units recognized by HEC-DSS that are listed in the Main Control File.  
+C
+C-------------------------------------------------------------------------------
+C   VALUE                       DESCRIPTION
+C-------------------------------------------------------------------------------
+      22                        / NDIVS
+      60.0                      / FACTX       values in CFS * 60 -> CFM
+      1min                      / TUNITX
+      60.0                      / FACTY       values in CFS * 60 -> CFM
+      1min                      / TUNITY
+C----------------------------------------------------------------------------------
+C
+C   ID      ; Bypass identification number
+C   IA      ; Stream node number where spills into bypass canal occur
+C   TYPEDEST; Destination type for the bypass
+C               0 = bypass goes to outside the model boundary
+C               1 = bypass goes to a downstream node
+C               3 = bypass goes to a lake
+C   DEST    ; Destination for the bypass
+C               * Note: Enter any number if TYPEDEST is set to 0
+C   IDIVC   ; If positive, IDIVC is the column number in the Diversion Data File for spills into bypass
+C             If negative, IDIVC is the number of points in the bypass rating table
+C               * Note: A rating table cannot be specified if the bypass originates outside the model area
+C   DIVRL   ; Fraction of the bypass flows assigned as recoverable loss
+C   DIVNL   ; Fraction of the bypass flows assigned as non-recoverable loss
+C   DIVX    ; Stream flow available at stream node IA; [L^3/T]
+C               * Note: Enter only if IDIVC is less than zero
+C   DIVY    ; Spills into bypass canal corresponding to DIVX; [L^3/T]
+C               * Note: Enter only if IDIVC is less than zero
+C   NAME    ; Name of the bypass (maximum 20 characters)
+C
+C----------------------------------------------------------------------------------
+C      ID       IA    TYPEDEST  DEST   IDIVC   DIVRL     DIVNL   NAME
+C                                              DIVX      DIVY    ( this rating table should follow if IDIVC < 0 )
+C-------------------------------------------------------------------------------------------------------                                                
+        1       401     1       458     439     0.0        0.0      M&T_Flood               / Bypass 1 - M&T Flood Relief Structure spill to Butte Basin
+        2       402     1       458     440     0.0        0.0      3Bs_Flood               / Bypass 2 - 3Bs Flood Relief Structure spill to Butte Basin
+        3       404     1       458     441     0.0        0.0      Goose_Lake_Flood        / Bypass 3 - Goose Lake Flood Relief Structure to Butte Basin
+        4       407     1       458     442     0.0        0.0      Moulton_Weir            / Bypass 4 - Moulton Weir spill to Butte Basin
+        5       409     1       458     443     0.0        0.0      Colusa_Weir             / Bypass 5 - Colusa Weir spill to Butte Basin
+        6       430     1       464     444     0.0        0.0      Tisdale_Weir            / Bypass 6 - Tisdale Weir near Grimes
+        7       498     1       528     445     0.0        0.0      Fremont_Weir            / Bypass 7 - Fremont Weir spill to Yolo Bypass
+        8       503     1       529     446     0.0        0.0      Sac_Weir                / Bypass 8 - Sacramento Weir spill to Yolo Bypass
+        9       446     1       528     447     0.0        0.0      KLR_to_Yolo_Bypass      / Bypass 9 - Knights Landing Ridge Cut flood flow to Yolo Bypass
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -                                                                                                         
+C Bypass 10 - reset of Cache Creek at Caypay Dam
+C All water routed from Cache Creek to bypass
+        10      0       0       0       457     0.0        0.0      Cache_Creek_At_Capay
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        11      88      1       89      449     0.0        0.0      Army+Cresent_Weirs      / Bypass 11 - Kings River to S Fork Kings River 
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+C Bypass 12 - San Joaquin River to Chowchilla Bypass                                                    
+C All but first 15 CFS routed to bypass                                         
+        12      145     1       148     -4       0.0       0.0      SJR_To_ChowchillaBP
+                                                 0.0       0.0       
+                                                15.0       0.0       
+                                                16.0       1.0       
+                                             50000.0   49985.0   
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+C Bypass 13 - Chowchilla River to Eastside Bypass                                               
+C All water routed from Chowchilla River to bypass
+        13      178     1       181     -4       0.0       0.0       Chowchilla_R_To_EastsideBP
+                                                 0.0       0.0       
+                                             10000.0   10000.0   
+                                           1500000.0 1500000.0 
+                                           5000000.0 5000000.0    
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+C Bypass 14 - Deadman's Creek to Eastside Bypass                                                
+C All water routed from Deadman’s Creek to bypass
+        14      196     1       198     -4       0.0       0.0       Deadmans_C_to_EastsideBP
+                                                 0.0       0.0       
+                                             10000.0   10000.0   
+                                           1500000.0 1500000.0 
+                                           5000000.0 5000000.0 
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+C Bypass 15 - Bear Creek to Eastside Bypass                                             
+C All water routed from Bear Creek to bypass
+        15      210     1       212     -4       0.0       0.0       Bear_C_to_EastsideBP
+                                                 0.0       0.0       
+                                             10000.0   10000.0   
+                                           1500000.0 1500000.0 
+                                           5000000.0 5000000.0      
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+C Bypass 16 - End of Kaweah River to be spread in Kaweah River Fan as recharge                                                  
+C -- Aquifer Storage Program                                                    
+C Simulate ALL flows at end of Kaweah River to be spread in as recharge                                                 
+        16      78      0       0       -4       1.0       0.0       Kaweah_R_ASR
+                                                 0.0       0.0       
+                                             10000.0   10000.0   
+                                           1500000.0 1500000.0 
+                                           5000000.0 5000000.0                 
+C Option: use time series of all zeroes, turning off this ASR bypass                                                    
+*       16      78      0       0       454      1.0       0.0       Kaweah_R_ASR
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -                                                         
+C Bypass 17 - End of Tule River to be spread in Tule River Fan as recharge                                                      
+C -- Aquifer Storage Program                                                    
+C Simulate ALL flows at end of Tule River to be spread in as recharge                                                   
+        17      68      0       0       -4       1.0       0.0       Tule_R_ASR
+                                                 0.0       0.0       
+                                             10000.0   10000.0   
+                                           1500000.0 1500000.0 
+                                           5000000.0 5000000.0                 
+C Option: use time series of all zeroes, turning off this ASR bypass                                                    
+*       17      68      0       0       455      1.0       0.0       Tule_R_ASR
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+C Bypass 18 - Kern River Flood Channel                                                  
+C -- Aquifer Storage Program                                                    
+* First 1000 CFS of flows at end of Kern River Flood Channel to be spread as recharge                                                   
+*       18      33      0       0       -4       1.0       0.0       Kern_FC_ASR
+*                                                0.0       0.0       
+*                                              100.0     100.0     
+*                                             1000.0    1000.0    
+*                                          5000000.0    1000.0            
+C Alternate version - All flow reaching the end of the reach is exported from the model                                                 
+        18      33      0       0       -4       0.0       0.0       Kern_to_TulareLake
+                                                 0.0       0.0       
+                                               100.0     100.0     
+                                              1500.0    1500.0    
+                                           5000000.0 5000000.0
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+C Bypass 19 - Delta Cross Channel
+        19      518     1       300     457      0.0       0.0       Delta_Cross
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+C Bypass 20 - San Joaquin River to Old River near Webb Tract
+        20      304     1       655     458      0.0       0.0       SJR_Old_River_N
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+C Bypass 21 - San Joaquin River to Old River near Stewart Tract
+        21      260     1       661     459      0.0       0.0       SJR_Old_River_S
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+C Bypass 22 - Sacramento River to Old River near Webb Tract
+        22      548     1       656     460      0.0       0.0       Sac_Old_River_N
+C----------------------------------------------------------------------------------
+C
+C               Seepage locations for bypass canals
+C
+C      The following information specifies the recharge zone for each bypass.
+C      (Skip if no bypass is being modeled, i.e. NBYPS = 0)
+C
+C   ID    ;  Recharge zone identification number
+C             (* Note: Recharge zone ID's should match bypass ID numbers)
+C   NERELS;  Total number of elements through which recharge occurs
+C   IERELS;  Element ID number through which recharge occurs
+C   FERELS;  Relative proportion of the recoverable loss to be applied to
+C             element IERELS as recharge.
+C
+C-------------------------------------------------------------------------------
+C  ID         NERELS       IERELS      FERELS
+C-------------------------------------------------------------------------------
+   1              0             0         0.0
+   2              0             0         0.0
+   3              0             0         0.0
+   4              0             0         0.0
+   5              0             0         0.0
+   6              0             0         0.0
+   7              0             0         0.0
+   8              0             0         0.0
+   9              0             0         0.0
+   10             0             0         0.0
+   11             0             0         0.0
+   12             0             0         0.0
+   13             0             0         0.0
+   14             0             0         0.0
+   15             0             0         0.0
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -                                                         
+C Bypass 16 - End of Kaweah River to be spread in Kaweah River Fan as recharge
+C -- Aquifer Storage Program - no observed flow past this stream node
+   16            41          1060         1.0
+                             1072         1.0
+                             1073         1.0
+                             1074         1.0
+                             1075         1.0
+                             1076         1.0
+                             1085         1.0
+                             1086         1.0
+                             1087         1.0
+                             1088         1.0
+                             1092         1.0
+                             1093         1.0
+                             1094         1.0
+                             1095         1.0
+                             1096         1.0
+                             1097         1.0
+                             1098         1.0
+                             1099         1.0
+                             1100         1.0
+                             1101         1.0
+                             1102         1.0
+                             1103         1.0
+                             1104         1.0
+                             1105         1.0
+                             1114         1.0
+                             1115         1.0
+                             1116         1.0
+                             1117         1.0
+                             1118         1.0
+                             1119         1.0
+                             1121         1.0
+                             1122         1.0
+                             1123         1.0
+                             1124         1.0
+                             1125         1.0
+                             1126         1.0
+                             1127         1.0
+                             1128         1.0
+                             1129         1.0
+                             1132         1.0
+                             1133         1.0
+C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -                                                         
+C Bypass 17 - End of Tule River to be spread in Tule River Fan as recharge
+C -- Aquifer Storage Program - no observed flow past this stream node
+   17            16          1129         1.0
+                             1130         1.0
+                             1131         1.0
+                             1132         1.0
+                             1133         1.0
+                             1134         1.0
+                             1148         1.0
+                             1149         1.0
+                             1150         1.0
+                             1151         1.0
+                             1152         1.0
+                             1153         1.0
+                             1154         1.0
+                             1168         1.0
+                             1169         1.0
+                             1170         1.0
+   18             0             0         0.0
+   19             0             0         0.0
+   20             0             0         0.0
+   21             0             0         0.0
+   22             0             0         0.0

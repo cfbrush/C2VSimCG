@@ -1,0 +1,103 @@
+C*******************************************************************************
+C
+C                  INTEGRATED WATER FLOW MODEL (IWFM)
+C
+C*******************************************************************************
+C       
+C                  URBAN WATER USAGE SPECIFICATION DATA FILE
+C                           Root Zone Component
+C                           *** Version 4.13 ***
+C
+C
+C             Project:  C2VSim Coarse Grid (C2VSimCG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSimCG_Urban_WaterUseSpecs.dat
+C             Version:  C2VSimCG v2025 
+C
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model - Coarse Grid (C2VSimCG)
+C  Copyright (C) 2003-2025
+C  State of California, Department of Water Resources 
+C
+C  This model is free: you can redistribute it and/or modify it 
+C  under the terms of the GNU General Public License as published 
+C  by the Free Software Foundation, either version 3 of the License, 
+C  or (at your option) any later version.
+C
+C  This model is distributed in the hope that it will be useful, but  
+C  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+C  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public 
+C  License for more details.
+C
+C  You should have received a copy of the GNU General Public License 
+C  along with this model. If not, see (https://www.gnu.org/licenses/).
+C
+C  For technical support, e-mail: IWFMtechsupport@water.ca.gov 
+C
+C*******************************************************************************
+C                              File Description
+C
+C   This data file contains a set of urban water usage specification data as the
+C   fraction of total urban water that is used indoors.  
+C   
+C*******************************************************************************
+C                            Urban Water Use Data Specifications
+C
+C   NURBSP   ;   Number of urban water use specifications data columns
+C   NSPURBSP ;   Number of time steps to update the urban water use specification data 
+C                 * Enter any number if time-tracking option is on
+C   NFQURBSP ;   Repitition frequency of the urban water use sepcification data 
+C                 * Enter 0 if full time series data is supplied
+C                 * Enter any number if time-tracking option is on
+C   DSSFL    ;   The name of the DSS file for data input (maximum 50 characters); 
+C                 * Leave blank if DSS file is not used for data input
+C
+C------------------------------------------------------------------------------
+C         VALUE                                      DESCRIPTION
+C------------------------------------------------------------------------------
+         21                                          / NURBSP
+          1                                          / NSPURBSP
+          0                                          / NFQURBSP
+                                                     / DSSFL
+C-------------------------------------------------------------------------------------------------
+C                            Urban Water Use Data
+C                            (READ FROM THIS FILE)
+C
+C   List the urban water use data below, if it will not be read from
+C   a DSS file (i.e. DSSFL is left blank above).
+C
+C   ITUSP ;  Time
+C   URINDR;  Fraction of total urban water that is used indoors
+C
+C-------------------------------------------------------------------------------------------------
+C   ITUSP   URINDR[1]  URINDR[2]  URINDR[3] ...  
+C-------------------------------------------------------------------------------------------------
+C   Subregion              1       2       3       4       5       6       7       8       9      10      11      12      13      14      15      16      17      18      19      20      21
+ 10/31/4000_24:00        0.50    0.50    0.50    0.50    0.50    0.50    0.50    0.50    0.50    0.50    0.50    0.54    0.50    0.50    0.50    0.50    0.50    0.50    0.40    0.40    0.40
+ 11/30/4000_24:00        0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.70    0.50    0.50    0.50
+ 12/31/4000_24:00        0.80    0.80    0.80    0.80    0.80    0.80    0.80    0.80    0.80    0.80    0.80    1.00    0.80    0.80    0.80    0.80    0.80    0.80    0.50    0.50    0.50
+ 01/31/4000_24:00        1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    0.95    1.00    1.00    1.00    1.00    1.00    1.00    0.50    0.50    0.50
+ 02/29/4000_24:00        1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    1.00    0.50    0.50    0.50
+ 03/31/4000_24:00        0.60    0.60    0.60    0.60    0.60    0.60    0.60    0.60    0.60    0.60    0.60    0.71    0.60    0.60    0.60    0.60    0.60    0.60    0.40    0.40    0.40
+ 04/30/4000_24:00        0.50    0.50    0.50    0.50    0.50    0.50    0.50    0.50    0.50    0.50    0.50    0.72    0.50    0.50    0.50    0.45    0.45    0.45    0.40    0.40    0.40
+ 05/31/4000_24:00        0.45    0.45    0.45    0.45    0.45    0.45    0.45    0.45    0.45    0.45    0.45    0.48    0.45    0.45    0.40    0.40    0.40    0.40    0.40    0.40    0.40
+ 06/30/4000_24:00        0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.39    0.40    0.40    0.40    0.40    0.40    0.40    0.30    0.30    0.30
+ 07/31/4000_24:00        0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.39    0.40    0.40    0.40    0.40    0.40    0.40    0.30    0.30    0.30
+ 08/31/4000_24:00        0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.35    0.40    0.40    0.40    0.40    0.40    0.40    0.30    0.30    0.30
+ 09/30/4000_24:00        0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.43    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40    0.40
+C-------------------------------------------------------------------------------
+C                       Pathnames for Urban Water Use Data
+C                             (READ FROM DSS FILE)
+C
+C   List the pathnames for urban water use data below, if it will be read
+C   from a DSS file (i.e. DSSFL is specified above).
+C
+C   REC  ;  Time series record number
+C   PATH ;  Pathname for the time series record 
+C
+C----------------------------------------------------------------------------------------------------------- 
+C   REC       PATH
+C-----------------------------------------------------------------------------------------------------------
+*
+*

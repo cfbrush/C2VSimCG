@@ -1,0 +1,93 @@
+C*******************************************************************************
+C
+C                  INTEGRATED WATER FLOW MODEL (IWFM)
+C
+C*******************************************************************************
+C
+C                    RE-USE FRACTIONS DATA FILE
+C                       Root Zone Component
+C                       *** Version 4.13 ***
+C
+C
+C             Project:  C2VSim Coarse Grid (C2VSimCG)
+C                       California Central Valley Groundwater-Surface Water Simulation Model
+C             Filename: C2VSimCG_ReuseFrac.dat
+C             Version:  C2VSimCG v2025 
+C
+C
+C*******************************************************************************
+C
+C  California Central Valley Groundwater-Surface Water Flow Model - Coarse Grid (C2VSimCG)
+C  Copyright (C) 2003-2025
+C  State of California, Department of Water Resources 
+C
+C  This model is free: you can redistribute it and/or modify it 
+C  under the terms of the GNU General Public License as published 
+C  by the Free Software Foundation, either version 3 of the License, 
+C  or (at your option) any later version.
+C
+C  This model is distributed in the hope that it will be useful, but  
+C  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+C  or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public 
+C  License for more details.
+C
+C  You should have received a copy of the GNU General Public License 
+C  along with this model. If not, see (https://www.gnu.org/licenses/).
+C
+C  For technical support, e-mail: IWFMtechsupport@water.ca.gov 
+C
+C*******************************************************************************
+C                           File Description
+C
+C   This data file contains a set of re-use data given as fractions of irrigation
+C   water.  
+C
+C*******************************************************************************
+C               Re-Use Fractions Data Specifications
+C
+C   NCOLRUF ; Number of re-use fractions data columns
+C   NSPRUF  ; Number of time steps to update the re-use fractions
+C              * Enter any number if time-tracking option is on
+C   NFQRUF  ; Repetition frequency of the re-use fractions data 
+C              * Enter 0 if full time series data is supplied
+C              * Enter any number if time-tracking option is on
+C   DSSFL   ; The name of the DSS file for data input 
+C              * Leave blank if DSS file is not used for data input
+C
+C-------------------------------------------------------------------------------
+C         VALUE                                      DESCRIPTION
+C-------------------------------------------------------------------------------
+          6                                          / NCOLRUF
+          1                                          / NSPRUF  
+          0                                          / NFQRUF
+                                                     / DSSFL
+C----------------------------------------------------------------------------------------------
+C                              Re-Use Fractions 
+C                            (READ FROM THIS FILE)
+C
+C   List the re-use fractions data below, if it will not be read from
+C   a DSS file (i.e. DSSFL is left blank above).
+C
+C   TIME ;  Time
+C   RUF  ;  Re-use as a fraction of applied water; [dimensionless]
+C
+C----------------------------------------------------------------------------------------------
+C       TIME     RUF[1]  RUF[2] ... RUF[NCOLRUF]
+C                    0%      1%      5%      10%     15%     Urban           
+C----------------------------------------------------------------------------------------------
+ 12/31/2100_24:00    0.000   0.010   0.050   0.100   0.150   0.000
+C-------------------------------------------------------------------------------
+C                       Pathnames for Re-Use Fractions Data
+C                             (READ FROM DSS FILE)
+C
+C   List the pathnames for re-use fractions data below, if it 
+C   will be read from a DSS file (i.e. DSSFL is specified above).
+C
+C   REC  ;  Time series record number
+C   PATH ;  Pathname for the time series record 
+C
+C----------------------------------------------------------------------------------------------------------- 
+C   REC     PATH
+C-----------------------------------------------------------------------------------------------------------
+*
+*
