@@ -2,3 +2,4 @@ Version,Time,Date,IWFM_version,comment
 C2VSimCG v2025,WY1974-2015,Jan-01-2026,2025.0.1747,DWR public draft
 C2VSimCG v2025+cb1,WY1974-2015,Aug-18-2026,2025.0.1747,Race condition: delivery adjustment - KOPTDV 11 to 10 (adjust GW pumping only; SW diversions are observed data)
 C2VSimCG v2025+cb2,WY1974-2015,Aug-18-2026,2025.0.1747,Race condition: multiple stream nodes sharing a GW node - CSTRM=0 at 88 confluence reach-end nodes (only the receiving node exchanges with the aquifer)
+C2VSimCG v2025+cb3,WY1974-2015,Aug-18-2026,2025.0.1747,OCL stream gage: add Orestimba Creek at River Road nr Crows Landing hydrograph at stream node 233 (Orestimba Creek), not SJR node 234

@@ -8,6 +8,7 @@ suggested change. Status: *proposed* until reviewed; reviewers mark *accepted* /
 | `C2VSimCG_v2025` | C2VSimCG v2025 | DWR public draft (unmodified base) | — | — | base |
 | `C2VSimCG_v2025+cb1` | C2VSimCG v2025+cb1 | Race condition: delivery adjustment - KOPTDV 11 to 10 (adjust GW pumping only; SW diversions are observed data) | Simulation/C2VSimCG.in (KOPTDV) | — | proposed |
 | `C2VSimCG_v2025+cb2` | C2VSimCG v2025+cb2 | Race condition: multiple stream nodes sharing a GW node - CSTRM=0 at 88 confluence reach-end nodes (only the receiving node exchanges with the aquifer) | Simulation/Streams/C2VSimCG_Streams.dat (Stream Bed Parameters, CSTRM) | — | proposed |
+| `C2VSimCG_v2025+cb3` | C2VSimCG v2025+cb3 | OCL stream gage: add Orestimba Creek at River Road nr Crows Landing hydrograph at stream node 233 (Orestimba Creek), not SJR node 234 | Simulation/Streams/C2VSimCG_Streams.dat (NOUTR, hydrograph list) | — | proposed |
 
 ## How to review one change
 
