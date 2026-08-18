@@ -11,6 +11,7 @@ suggested change. Status: *proposed* until reviewed; reviewers mark *accepted* /
 | `C2VSimCG_v2025+cb3` | C2VSimCG v2025+cb3 | OCL stream gage: add Orestimba Creek at River Road nr Crows Landing hydrograph at stream node 233 (Orestimba Creek), not SJR node 234 | Simulation/Streams/C2VSimCG_Streams.dat (NOUTR, hydrograph list) | — | proposed |
 | `C2VSimCG_v2025+cb4` | C2VSimCG v2025+cb4 | Erroneous diversion sources: Kings River spreading diversions 261/263/265 (FID/CID/ALTA_SPR) IRDV 0 to 79 - draw from the Kings River instead of from nowhere (double-count) | Simulation/Streams/C2VSimCG_DiversionSpec.dat (IRDV, rows 261/263/265) | — | proposed |
 | `C2VSimCG_v2025+cb5` | C2VSimCG v2025+cb5 | Kings River Nov-Feb diversions: cap FID/CID/ALTA crop (AG) diversions at crop demand and move the surplus to the paired spreading diversions (Diversions.dat cols 260-265, 231 month-values) | Simulation/Streams/C2VSimCG_Diversions.dat (cols 260/261, 262/263, 264/265, Nov-Feb rows) | cb4 (spreading diversions must draw from node 79) | proposed |
+| `C2VSimCG_v2025+cb6` | C2VSimCG v2025+cb6 | WWTP discharge destinations: route urban (M&I) return flow of 26 southern evaporation-pond city clusters (331 elements; Fresno-Clovis, Visalia, Hanford, Merced, Madera, Porterville, Corcoran, Delano) out of the model instead of to stream nodes | Simulation/RootZone/C2VSimCG_RootZone.dat (ICDSTURBIN/ICDSTURBOUT, 331 elements); Simulation/RootZone/C2VSimCG_SurfFlowDest.dat (NDSTN 1392 to 1393, new column (0,0)) | — | proposed |
 
 ## How to review one change
 
